@@ -1,10 +1,12 @@
 import Link from "next/link";
+import styles from '../styles/Home.module.css';
 
 function Navbar() {
     console.log(Navbar);
     return (
         <nav>
-        <div className="ui container" id>
+        <div className={styles.navbar} id>
+            <h1 className="links">
             <Link class="home" href="/">
                 <button>Home</button>
             </Link>
@@ -20,6 +22,15 @@ function Navbar() {
             <Link class="connect" href="/connect">
                 <button>Connect</button>
             </Link>
+            <style jsx> {`       
+          .links {
+             display: flex;
+             flex-direction: row;   
+             align-content: center;         
+          }             
+        `}
+        </style>
+        </h1>
         </div>
         </nav>
     )

@@ -1,4 +1,5 @@
 .container {
+  color: red;
   padding: 0 2rem;
 }
 
@@ -114,3 +115,30 @@
     flex-direction: column;
   }
 }
+
+.connect {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.music {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.navbar {
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+

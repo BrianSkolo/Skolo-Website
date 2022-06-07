@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-
+import styles from'../styles/Home.module.css';
 
 // import SkoloFace from "../public/images/SkoloFace.jpg";
 
@@ -19,7 +19,7 @@ import Footer from "./Footer";
 
 export default function Layout({ children }) {
     return (
-        <div className="content">
+        <div className="layout">
             <Navbar />
             <main>{children}</main>
             <Footer />

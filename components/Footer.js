@@ -1,5 +1,5 @@
 function Footer() {
-    return <div>&copy; 2022</div>
+    return <div style={{textAlign: 'right'}}>&copy; 2022</div>
 }
 
 export default Footer

@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/Home.module.css';
 import Layout from '../components/Layout'
 
 
