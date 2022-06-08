@@ -136,9 +136,24 @@
 
 }
 
+.about {
+  font-size: x-large;
+}
+
+.shows {
+  font-size: medium;
+}
+
+
+
 .navbar {
   margin-right: auto;
   margin-left: auto;
   
+}
+
+#navbar-1 {
+  display: flex;
+  justify-content: space-around;
 }
 
