@@ -1,0 +1,13 @@
+.bgImage {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../public/SkoloStairs.jpg');
+    /* object-fit: contain; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+  
+    
+
+    color: white;
+}

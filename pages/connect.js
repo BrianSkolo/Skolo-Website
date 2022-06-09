@@ -1,13 +1,14 @@
-import styles from'../styles/Home.module.css';
+import styles from '../styles/Home.module.css';
 
 export default function Form() {
-    return (
-      <div className="container">
-        <h1 className={styles.music}>Connect:</h1>
+  return (
+    <div className={styles.connect}>
+      <h1 className={styles.connect}>Contact Us:</h1>
+      <div>
         <form className={styles.connect} action="/api/form" method="post">
           <label htmlFor="first">First Name</label>
           <input className="input" type="text" id="first" name="first" required />
-  
+
           <label htmlFor="second">Last Name</label>
           <input className="input" type="text" id="last" name="last" required />
 
@@ -17,18 +18,11 @@ export default function Form() {
           <label htmlFor="last">Message</label>
           <input className="input" type="text" id="email" required />
 
-          {/* <br /> */}
-  
-          <button className="input" style={{ backgroundColor: 'blue', color: 'white' }} type="submit">Submit</button>
+          <br />
+
+          <button className="input" style={{width: '25%'}} type="submit">Submit</button>
         </form>
-        {/* <style jsx> {`       
-          .form {
-             display: flex;
-             flex-direction: column;
-            
-          }             
-        `}
-        </style> */}
       </div>
-    )
-  }
+    </div>
+  )
+}

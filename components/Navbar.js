@@ -2,11 +2,10 @@ import Link from "next/link";
 import styles from '../styles/Home.module.css';
 
 function Navbar() {
-    console.log(Navbar);
     return (
-        <nav>
-        <div className={styles.navbar}>
-            <h1 className="links">
+        <>
+        
+        <div className={styles.navbar}>           
             <Link class="home" href="/">
                 <button>Home</button>
             </Link>
@@ -21,12 +20,11 @@ function Navbar() {
             </Link>
             <Link class="connect" href="/connect">
                 <button>Connect</button>
-            </Link>
-         
-       
-        </h1>
+            </Link>   
         </div>
-        </nav>
+        
+        
+        </>
     )
 }
 

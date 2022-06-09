@@ -2,7 +2,8 @@ import styles from'../styles/Home.module.css';
 
 function BeatportLink() {
     return (
-        <div>
+        <>
+        <div className={styles.music}>
             <h1 className={styles.music}>Listen:</h1>
                 <a className={styles.music} target="blank" href="https://www.beatport.com/artist/skolo/978581">
                     <img src="Beatport.jpg" alt="Beatport"/>
@@ -34,6 +35,7 @@ function BeatportLink() {
         `}
             </style>
         </div>
+        </>
     )
 }
 

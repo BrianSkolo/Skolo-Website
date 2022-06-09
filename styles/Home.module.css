@@ -119,20 +119,17 @@
 .connect {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  align-items: stretch;
+  
 }
 
 
 .music {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  justify-content: space-around;
 
 }
 
@@ -147,13 +144,67 @@
 
 
 .navbar {
-  margin-right: auto;
-  margin-left: auto;
+  display: flex;
+  width: 100%;
+  justify-content: space-around; 
+ 
+}
+
+.SkoloLogo {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  align-items: center;
+  height: 150px;
+  background: transparent no-repeat center;
+  background-size: cover;
+ 
+  
   
 }
 
-#navbar-1 {
+/* .SkoloLogo {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 50%;
+  align-items: end;
+  
+  
+} */
+
+/* .SkoloStairs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: self-end;
+  background-attachment: cover;
+} */
+
+/* .bgImage {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../public/SkoloStairs.jpg');
+} */
+
+
+
+/* .layout {
+  background: #007DB2
+} */
+
+/* .SkoloLogoImage {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+} */
+
+
+
+/* #navbar-1 {
   display: flex;
   justify-content: space-around;
-}
+} */
+
+
 
