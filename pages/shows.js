@@ -1,19 +1,21 @@
 import styles from'../styles/Home.module.css';
-import Unicorns from '../public/Unicorns.jpg'
+
 
 
 function Shows() {
     return (
         <div className={styles.shows}>
-            <h1 id="show_page">
-                <h2>Upcoming Shows:</h2>
-                <p>The Unicorns and The Cruz Coalition Presents: In Unicorns We Trust</p>
-                <p>6250 Hollywood Blvd, Los Angeles CA</p>
-                <p>July 3, 2022</p>
+            <h1 className="showPage">
+                <h2 className={styles.showElements}>Upcoming Shows:</h2>
+                <p className={styles.showElements}>The Unicorns and The Cruz Coalition Presents: In Unicorns We Trust</p>
+                <p className={styles.showElements}>6250 Hollywood Blvd, Los Angeles CA</p>
+                <p className={styles.showElements}>July 3, 2022</p>
             </h1>
             <img 
                 src="Unicorns.jpg"
-                width="1000 px"
+                width="100%"
+                height="100%"
+                object-fit="contain"
             />
         </div>
     )

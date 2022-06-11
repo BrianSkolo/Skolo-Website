@@ -1,11 +1,16 @@
 import styles from '../styles/Home.module.css';
 
+// 
+
 export default function Form() {
   return (
     <div className={styles.connect}>
-      <h1 className={styles.connect}>Contact Us:</h1>
-      <div>
-        <form className={styles.connect} action="/api/form" method="post">
+      <div className={styles.connectContactUs}>
+        <h1>Contact Us:</h1>
+      </div>
+
+      <div className={styles.connectContactForm} style={{ display: 'flex', justifyContent: 'center' }}>
+        <form className={styles.form} action="/api/form" method="post">
           <label htmlFor="first">First Name</label>
           <input className="input" type="text" id="first" name="first" required />
 

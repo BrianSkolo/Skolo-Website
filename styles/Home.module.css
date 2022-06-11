@@ -1,4 +1,6 @@
-
+/* .testFont {
+  font-family: 'Newake'
+} */
 
 .container {
   color: red;
@@ -119,20 +121,20 @@
     flex-direction: column;
   }
 }
-
+/* connect.js */
 .connect {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  align-items: stretch;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 15px;
-  
+  align-items: center;
+  width: 100%; 
 }
 
-.contact {
-  padding-bottom: 15px;
+.connectContactForm {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
 }
 
 .form {
@@ -140,9 +142,6 @@
   flex-direction: column;
   width: 100%;
   align-items: stretch;  
-  
-  /* position: fixed;
-  bottom: 0; */
 }
 
 .input {
@@ -150,11 +149,12 @@
   background-color: transparent;
 }
 
+/* music.js */
 
 .music {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  border-width:2px;
   justify-content: space-around;
   padding-left: 25px;
   padding-right: 25px;
@@ -168,42 +168,23 @@
   flex-wrap: wrap;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center;  
 }
-
-/* .musicLinksParent {
-  border: 1px solid red;
-  height: 200px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} */
-
-
-
-/* .image {
-    max-width: 50%;
-    height: auto;
-} */
 
 .about {
   font-size: x-large;
+  
   padding-top: 25px;
   padding-left: 20px;
   padding-right: 20px;
-  /* -webkit-text-stroke: 1px black; */
-  
-
+  color: white;
 }
 
-/* .aboutText {
-  stroke: black;
-  stroke-width: 500px;
-} */
+.aboutHeader {
+  font-size: 20px;
+}
 
+/* shows.js */
 .shows {
   font-size: medium;
   padding-left: 125px;
@@ -212,31 +193,33 @@
 }
 
 .showElements {
+  
   padding-top: 0px;
   padding-bottom: 0px;
   margin-top: 0px;
   margin-bottom: 10px;
+  
 }
+ 
 
-/* .showPage {
-  padding-bottom: 500px;
-} */
-
-
-
+/* navbar.js */
 .navbar {
   display: flex;
   width: 100%;
   justify-content: space-around; 
   border: none;
   margin-top: -25px;
-  
-  
-  /* background-color: transparent; 
-  border: none;  */
- 
 }
 
+.buttonbg {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* header.js */
 .SkoloLogo {
   display: flex;
   flex-direction: column;
@@ -246,86 +229,9 @@
   background: transparent no-repeat center;
   background-size: cover; 
   cursor: pointer;
-
-  /* margin-top: 1px;
-  margin-bottom: 0px;
-  margin-right: 20px;  */
 }
 
 
-.buttonbg {
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-size: 15;
-  cursor: pointer;
-  /* -webkit-text-stroke: .5px black; */
-
-    
-  
-    
-    
-
-}
-
-/* .musicpageimage {
-  width: 400px;
-  height: 100px;
-}
-
-.img-responsive {
-  display: block;
-  width: 100%;
-} */
-
-
-
-
-
-
-/* .SkoloLogo {
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  height: 50%;
-  align-items: end;
-  
-  
-} */
-
-/* .SkoloStairs {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: self-end;
-  background-attachment: cover;
-} */
-
-/* .bgImage {
-  height: 100vh;
-  width: 100%;
-  background-image: url('../public/SkoloStairs.jpg');
-} */
-
-
-
-.layout {
-  stroke: black;
-  stroke-width: 50px;
-}
-
-/* .SkoloLogoImage {
-  display: flex;
-  align-items: center;
-  justify-content: space-around; 
-} */
-
-
-
-/* #navbar-1 {
-  display: flex;
-  justify-content: space-around;
-} */
 
 
 

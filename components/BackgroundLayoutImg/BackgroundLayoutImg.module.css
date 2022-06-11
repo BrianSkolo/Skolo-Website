@@ -1,10 +1,12 @@
 .bgImage {
     height: 100vh;
     width: 100%;
-    background-image: url('../../public/SkoloStairs.jpg');
+    background-image: url('../../public/SkoloStairs24x16.png');
     /* object-fit: contain; */
     background-size: contain;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
     
   
     

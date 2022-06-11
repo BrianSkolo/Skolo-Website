@@ -1,44 +1,34 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Header from "./Header";
-// import Background from "./Background";
-import Image from 'next/image';
-import SkoloFace from '../public/SkoloFace.jpg'
+// import Image from 'next/image';
 import styles from'../styles/Home.module.css';
 import BackgroundLayoutImg from '../components/BackgroundLayoutImg/BackgroundLayoutImg';
 
-// import SkoloFace from "../public/images/SkoloFace.jpg";
-
-// function HeadShot() {
-//     return (
-//         <>
-//             <Image 
-//                 src={SkoloFace} 
-//                 alt="SkoloFaceVectorImage"               
-//             />
-//         </>
-//     )
-// }
-
-
-
 export default function Layout({ children }) {
     return (
-        <div className="layout">
-            {/* <Background /> */}
-            {/* <BackgroundLayoutImg> */}
+        <div className="layout">  
+            {/* <link 
+            href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" rel="stylesheet" 
+            />   */}
+                 
+            <BackgroundLayoutImg>
 
-            <Header /> 
-            <Navbar />     
-             
-            <main>{children}</main>
-            {/* </BackgroundLayoutImg>   */}
-            <Footer className="new-footer"/>
-            
-            {/* <img 
-                src="SkoloFace.jpg"
-                width="1000 px"
-            /> */}
+            <div>
+                <Header /> 
+            </div>
+            <div>
+                <Navbar />  
+            </div>   
+            <div>
+                <main>{children}</main>    
+            </div>    
+
+            </BackgroundLayoutImg>
+
+            <div>
+                <Footer className="new-footer" />
+            </div>
         </div>
     );
 }

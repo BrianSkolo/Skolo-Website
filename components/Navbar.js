@@ -4,26 +4,25 @@ import styles from '../styles/Home.module.css';
 function Navbar() {
     return (
         <>
-        
-        <div className={styles.navbar}>           
+        <nav className={styles.navbar}>
+        <div className={styles.navbar} >           
             <Link class="home" href="/">
-                <button>Home</button>
+                <button className={styles.buttonbg}>Home</button>
             </Link>
             <Link class="about" href="/about">
-                <button>About</button>
+                <button className={styles.buttonbg}>About</button>
             </Link>
             <Link class="shows" href="/shows">
-                <button>Shows</button>
+                <button className={styles.buttonbg}>Shows</button>
             </Link>
             <Link class="music" href="/music">
-                <button>Music</button>
+                <button className={styles.buttonbg}>Music</button>
             </Link>
             <Link class="connect" href="/connect">
-                <button>Connect</button>
+                <button className={styles.buttonbg}>Contact/Booking</button>
             </Link>   
-        </div>
-        
-        
+        </div>       
+        </nav>
         </>
     )
 }
