@@ -6,7 +6,7 @@ function Shows() {
     return (
         <div className={styles.shows}>
             <h1 className="showPage">
-                <h2 className={styles.showElements}>Upcoming Shows:</h2>
+                <h2 className={styles.showElements} style={{ fontFamily: 'BebasNeue' }}>Upcoming Shows:</h2>
                 <p className={styles.showElements}>The Unicorns and The Cruz Coalition Presents: In Unicorns We Trust</p>
                 <p className={styles.showElements}>6250 Hollywood Blvd, Los Angeles CA</p>
                 <p className={styles.showElements}>July 3, 2022</p>

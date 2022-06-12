@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <>
         <nav className={styles.navbar}>
-        <div className={styles.navbar} >           
+        <div className={styles.navbar}>           
             <Link class="home" href="/">
                 <button className={styles.buttonbg}>Home</button>
             </Link>

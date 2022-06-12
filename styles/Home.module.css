@@ -130,7 +130,7 @@
   border-width:2px;
   /* border-style: solid;
   border-color: white; */
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .tourDates {
@@ -138,6 +138,14 @@
   flex-direction: column;
   align-items: center;
   width: 100%; 
+  font-family: BebasNeue;
+  font-size: 40px;
+  
+  /* margin-bottom: 0px; */
+}
+
+.connectContactUs {
+  padding: 0px;
 }
 
 .connectContactForm {
@@ -149,9 +157,12 @@
 .form {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center; 
+  align-content: space-evenly;
   height: 10;
   width: 2000px;
+  /* transform: scale(1.5) */
   
  
 }
@@ -194,6 +205,12 @@
 }
 
 .aboutHeader {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; 
+  font-family: BebasNeue;
   font-size: 20px;
 }
 
@@ -218,10 +235,14 @@
 /* navbar.js */
 .navbar {
   display: flex;
+  flex-direction: row;
+  justify-content: center;  
   width: 100%;
   justify-content: space-around; 
   border: none;
   margin-top: -25px;
+ 
+  
 }
 
 .buttonbg {
@@ -230,6 +251,7 @@
   color: white;
   cursor: pointer;
   font-size: 17px;
+  
 }
 
 /* header.js */
@@ -243,6 +265,13 @@
   background-size: cover; 
   cursor: pointer;
 }
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../public/BebasNeue-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  }
 
 
 

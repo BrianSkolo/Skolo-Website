@@ -7,7 +7,7 @@ function BeatportLink() {
         <>
         <div className={styles.music}>
             <div>
-                <h1 style={{ display: 'flex', justifyContent: 'center', paddingBottom: '20px', paddingTop: '25px'}}>
+                <h1 style={{ display: 'flex', justifyContent: 'center', paddingBottom: '20px', paddingTop: '25px', fontFamily: 'BebasNeue' }}>
                     Listen:
                 </h1>
             </div>
