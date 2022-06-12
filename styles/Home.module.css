@@ -240,9 +240,7 @@
   width: 100%;
   justify-content: space-around; 
   border: none;
-  margin-top: -25px;
- 
-  
+  margin-top: -25px;  
 }
 
 .buttonbg {
@@ -251,7 +249,12 @@
   color: white;
   cursor: pointer;
   font-size: 17px;
-  
+  width: 100px;
+
+}
+
+.navLink {
+  text-align: center;
 }
 
 /* header.js */
@@ -266,12 +269,35 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .buttonbg {
+    width: 50px;
+  }
+  
+}
+
 @font-face {
   font-family: 'BebasNeue';
   src: url('../public/BebasNeue-Regular.ttf');
   font-weight: 400;
   font-style: normal;
   }
+
+.overlayHeader {
+
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+    overflow: hidden;
+    background: #C04848;  /* fallback for old browsers */
+    background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8));
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 
 

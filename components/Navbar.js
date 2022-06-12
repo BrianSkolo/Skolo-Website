@@ -6,19 +6,19 @@ function Navbar() {
         <>
         <nav className={styles.navbar}>
         <div className={styles.navbar}>           
-            <Link class="home" href="/">
+            <Link className={styles.navLink} href="/">
                 <button className={styles.buttonbg}>Home</button>
             </Link>
-            <Link class="about" href="/about">
+            <Link className={styles.navLink} href="/about">
                 <button className={styles.buttonbg}>About</button>
             </Link>
-            <Link class="shows" href="/shows">
+            <Link className={styles.navLink} href="/shows">
                 <button className={styles.buttonbg}>Shows</button>
             </Link>
-            <Link class="music" href="/music">
+            <Link className={styles.navLink} href="/music">
                 <button className={styles.buttonbg}>Music</button>
             </Link>
-            <Link class="connect" href="/connect">
+            <Link className={styles.navLink} href="/connect">
                 <button className={styles.buttonbg}>Contact/Booking</button>
             </Link>   
         </div>       
