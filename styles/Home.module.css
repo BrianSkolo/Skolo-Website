@@ -182,8 +182,8 @@
   justify-content: space-around;
   padding-left: 25px;
   padding-right: 25px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .flexContainer {
@@ -216,18 +216,33 @@
 
 /* shows.js */
 .shows {
-  font-size: medium;
-  padding-left: 125px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 75px;
+  /* flex: 1 1 160px;
+  margin: 10px; */
+
+  
+  /* max-width: 30%; */
+  /* justify-content: center; */
+  font-size: large;
+ 
+  
+  /* padding-left: 125px;
   padding-right: 125px;
-  padding-top: 50px
+  padding-top: 50px */
 }
 
 .showElements {
   
-  padding-top: 0px;
-  padding-bottom: 0px;
-  margin-top: 0px;
-  margin-bottom: 10px;
+  margin-left: 125px;
+  margin-bottom: 5px;
+ 
+  
+  
+  
+
   
 }
  
