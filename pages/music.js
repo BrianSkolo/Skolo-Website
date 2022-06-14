@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 function BeatportLink() {
     return (
         <>
-            <div className={styles.music}>
+            <div className={styles.music} style={{}}>
                 <div>
                     <h1
                         style={{ display: 'flex', justifyContent: 'center', paddingBottom: '0px', paddingTop: '25px', fontFamily: 'BebasNeue', marginBottom: '0px'}}>
