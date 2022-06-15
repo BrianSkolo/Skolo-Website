@@ -1,42 +1,85 @@
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
+import styled from 'styled-components';
+
+const ShowsContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%; 
+    border-width:2px;
+    margin-top: 75px;
+   
+    color: white;
+    // align-self: flex-end;
+    // justify-content: flex-start;
+`;
+
+const InfoContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: auto; 
+`;
+
+const ImageContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    align-items: right;
+    width: 100%; 
+
+`;
+
+const EventImage = styled.img`
+    width: 500px;
+    display: block;
+    cursor: pointer;
+    padding: 20px;
+    padding-top: 30px;
+    
+`;
 
 
 
 function Shows() {
     return (
-        <div className={styles.shows}>
+        <ShowsContainer className={styles.shows}>
 
-            <div style={{ transform: 'scale(1.5)', padding: '65px', }}>
+            <InfoContainer>
                 <h1
-                    className={styles.showElements} style={{ fontFamily: 'BebasNeue', }}>Upcoming Shows:</h1>
-                <p
-                    className={styles.showElements}>The Unicorns and The Cruz Coalition Presents: In Unicorns We Trust
-                </p>
-
-                <p
-                    className={styles.showElements}>6250 Hollywood Blvd, Los Angeles CA
-                </p>
-                <p
-                    className={styles.showElements}>July 3, 2022
-                </p>
-            </div>
-            <div style={{ maxWidth: '35%', marginLeft: 'auto', marginRight: '30px' }}>
-
-                <Link
-                    style={{ backgroundColor: "transparent", border: "none", cursor: 'pointer'}}
-                    href="https://www.facebook.com/events/705625483884426">
-                    <img
-                        src="Unicorns.jpg"
-                        width="100%"
-                        height="100%"
-                        object-fit="contain"
+                    style={{ fontFamily: 'BebasNeue', }}>
                         
+                        Upcoming Shows:
+                        
+                </h1>
+                <p
+                    >The Unicorns and The Cruz Coalition Presents: In Unicorns We Trust
+                </p>
 
+                <p
+                   >6250 Hollywood Blvd, Los Angeles CA
+                </p>
+                <p
+                    >July 3, 2022
+                </p>
+            </InfoContainer>
+
+            <ImageContainer>
+
+                <Link href="https://www.facebook.com/events/705625483884426">
+                    <EventImage
+                        src="Unicorns.jpg"
+                    
+                        // width="100%"
+                        // height="100%"
+                        // object-fit="contain"
                     />
                 </Link>
-            </div>
-        </div>
+
+            </ImageContainer>
+
+        </ShowsContainer>
     )
 
 }
