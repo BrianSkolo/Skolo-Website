@@ -1,16 +1,17 @@
 import styles from '../styles/Home.module.css';
 
 import styled from 'styled-components';
+import ClientOnly from '../components/clientOnly';
 
 const HeaderContainer = styled.div`
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%; 
-      border-width:2px;
-      margin-top: 75px;
-      color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    border-width:2px;
+    margin-top: 75px;
+    color: white;
      
 `;
 const LinksContainer = styled.div`
@@ -27,21 +28,27 @@ const MusicImage = styled.img`
     padding-top: 30px;
 `;
 
+const Listen = styled.h1`
+    font-family: BebasNeue; 
+`;
+
 
 function BeatportLink() {
     return (
-        <>
-            <HeaderContainer>                
-                <h1
-                    style={{ fontFamily: 'BebasNeue',}}>
+        
+            <ClientOnly id="styled-components-render"> 
+            <HeaderContainer id="header-container">  
+                            
+                <Listen id="listen">
 
                     Listen:
 
-                </h1>   
-
+                </Listen> 
+                
                 <LinksContainer>
                     <a target="blank" href="https://www.beatport.com/artist/skolo/978581">
-                        <MusicImage
+                        <MusicImage 
+                            id="beatport-image"
                             src="BeatportNoBG4.png"
                             alt="Beatport"  
                             style={{ paddingTop: '0px'}}                      
@@ -49,7 +56,8 @@ function BeatportLink() {
                     </a>  
 
                     <a target="blank" href="https://www.traxsource.com/artist/612812/skolo">
-                        <MusicImage                           
+                        <MusicImage 
+                            id="traxsource-image"                          
                             src="TraxsourceNoBGCroppedSmaller.png"
                             alt="Traxsource"
                             
@@ -57,13 +65,15 @@ function BeatportLink() {
                     </a>              
                       
                     <a target="blank" href="https://music.apple.com/us/artist/skolo/1482772924">
-                        <MusicImage                            
+                        <MusicImage  
+                            id="appleMusic-image"                          
                             src="AMLogoNoBG.png"                           alt="Apple Music" 
                         />
                     </a>
                                          
                     <a target="blank" href="https://open.spotify.com/artist/3E2JNTaM9NCiwA2TjvyxHw">
                         <MusicImage
+                            id="spotify-image"
                             src="SpotifyNoBG2.png"
                             alt="Spotify" />
                     </a>
@@ -71,7 +81,7 @@ function BeatportLink() {
                 </LinksContainer>
 
             </HeaderContainer>
-        </>
+            </ClientOnly>
     )
 }
 

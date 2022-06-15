@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css';
 import Link from "next/link";
 import styled from 'styled-components';
+import ClientOnly from '../components/clientOnly';
 
 const HeaderContainer = styled.div`
       display: flex;
@@ -8,7 +9,7 @@ const HeaderContainer = styled.div`
       align-items: center;
       width: 100%; 
       border-width:2px;
-      margin-top: 115px;
+      margin-top: 75px;
       color: white;
       
 `;
@@ -87,23 +88,25 @@ const SignUpButton = styled.button`
 
 export default function Form() {
   return (
-    <HeaderContainer>
+    <ClientOnly id="styled-components-render">
+    <HeaderContainer id="header-container">
 
       {/* tour dates */}
-      <DatesContainer>
+      <DatesContainer id="dates-container">
 
-        <TourDates style={{ marginBottom: '0px' }}>
+        <TourDates id="tour" style={{ marginBottom: '0px' }}>
           Tour
         </TourDates>
 
-        <TourDates style={{ marginTop: '0px', marginBottom: '15px' }}>
+        <TourDates id="dates" style={{ marginTop: '0px', marginBottom: '15px' }}>
           Dates
         </TourDates>
 
 
         {/* purchase tickets */}
-        <Link class="shows" href="/shows">
-          <TixButton
+        <Link id="ticket-link" class="shows" href="/shows">
+          <TixButton 
+            id="ticket-button"
             style={{
               borderWidth: '1px',
               borderStyle: 'solid',
@@ -119,10 +122,11 @@ export default function Form() {
       </DatesContainer>
 
       {/* email header */}
-      <ContactUsContainer>
-        <CommunityNewsContainer >
+      <ContactUsContainer id="contactUs-container">
+        <CommunityNewsContainer id="communityNews-container">
 
           <h1
+            id="Community News"
             style={{
               fontFamily: 'BebasNeue',
               transform: 'scale(2)',
@@ -135,6 +139,7 @@ export default function Form() {
 
 
           <h2
+            id="subscribe-text"
             style={{
               fontSize: '20px',
               marginBottom: '25px'
@@ -147,7 +152,7 @@ export default function Form() {
 
         </CommunityNewsContainer >
         
-        <FormContainer className={styles.form} action="/api/form" method="post">
+        <FormContainer id="form-container" className={styles.form} action="/api/form" method="post">
           <label htmlFor="third">
             <Input
               type="text"
@@ -156,6 +161,7 @@ export default function Form() {
           </label>
 
           <SignUpButton
+            id="signUp-button"
             type="submit">
 
             Sign Up
@@ -167,5 +173,6 @@ export default function Form() {
       </ContactUsContainer>
       
     </HeaderContainer>
+    </ClientOnly>
   )
 }
