@@ -1,77 +1,171 @@
 import styles from '../styles/Home.module.css';
 import Link from "next/link";
+import styled from 'styled-components';
 
-// 
+const HeaderContainer = styled.div`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; 
+      border-width:2px;
+      margin-top: 115px;
+      color: white;
+      
+`;
+
+const DatesContainer = styled.div`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; 
+`;
+
+const TourDates = styled.h1`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    font-family: BebasNeue;
+    font-size: 70px;
+    margin-bottom: 0px
+`;
+
+const TixButton = styled.button`
+    color: white;
+    background-color: transparent;
+    font-size: 17px;
+    width: 100px;
+    cursor: pointer;
+    text-align: center;  
+    
+`;
+
+const CommunityNewsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+`;
+
+const ContactUsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    margin-top: 125px;
+`;
+
+const FormContainer = styled.div`   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-content: space-evenly;
+    height: 10;
+    width: 2000px;
+`;
+
+const Input = styled.input`
+    border: none;
+    border-radius: 4px; 
+    font-family: Roboto; 
+    border-color: white;
+    // background-color: transparent;
+`;
+
+const SignUpButton = styled.button`
+    width: 4%, 
+    border-radius: 4px; 
+    background-color: red; 
+    font-family: Roboto; 
+    color: white; 
+    border-color: transparent;
+`;
+
+
+
+
 
 export default function Form() {
   return (
-    <div className={styles.connect}>
+    <HeaderContainer>
 
       {/* tour dates */}
-      <div style={{ marginBottom: '200px', transform: 'scale(2)' }}>
-        <div>
-          <h1 className={styles.tourDates} style={{ margin: 0, marginTop: '0px', marginBottom: '0px' }}>
-            Tour
-          </h1>
-        </div>
-        <div>
-          <h1 className={styles.tourDates} style={{ margin: 0, marginBottom: '5px', marginTop: '0', padding: '0' }}>
-            Dates
-          </h1>
-        </div>
+      <DatesContainer>
+
+        <TourDates style={{ marginBottom: '0px' }}>
+          Tour
+        </TourDates>
+
+        <TourDates style={{ marginTop: '0px', marginBottom: '15px' }}>
+          Dates
+        </TourDates>
+
+
         {/* purchase tickets */}
         <Link class="shows" href="/shows">
-          <button
-            className={styles.buttonbg} style={{ borderWidth: '1px', borderStyle: 'solid', padding: '5px', borderRadius: '4px' }}>Purchase Tickets
-          </button>
+          <TixButton
+            style={{
+              borderWidth: '1px',
+              borderStyle: 'solid',
+              padding: '5px',
+              borderRadius: '4px',
+              transform: 'scale(1.5)'
+            }}>
+
+            Purchase Tickets
+
+          </TixButton>
         </Link>
-      </div>
+      </DatesContainer>
 
       {/* email header */}
-      <div className={styles.connectContactUs}>
-        <div>
+      <ContactUsContainer>
+        <CommunityNewsContainer >
 
           <h1
-            style={{ display: 'flex', justifyContent: 'center', alignContent: 'center', fontFamily: 'BebasNeue', margin: '0', marginBottom: '15px', transform: 'scale(2)', paddingBottom: '5px' }}>Community News
+            style={{
+              fontFamily: 'BebasNeue',
+              transform: 'scale(2)',
+              marginTop: 0,
+              marginBottom: '10px'
+            }}>
+
+            Community News
           </h1>
 
+
           <h2
-            style={{ display: 'flex', justifyContent: 'center', alignContent: 'center', fontSize: '20px', margin: '0', marginTop: '5px', marginBottom: '10px', paddingBottom: '10px' }}>Subscribe with your email address to keep up with the latest Skolo news, events, and exclusives via email.
+            style={{
+              fontSize: '20px',
+              marginBottom: '25px'
+            }}>
+
+            Subscribe with your email address to keep up with the latest Skolo news, events, and exclusives via email.
+
           </h2>
 
-        </div>
 
+        </CommunityNewsContainer >
+        
+        <FormContainer className={styles.form} action="/api/form" method="post">
+          <label htmlFor="third">
+            <Input
+              type="text"
+              id="email"
+              placeholder='Enter your email' />
+          </label>
 
-        {/* contact form */}
-        <div className={styles.form} style={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
+          <SignUpButton
+            type="submit">
 
-          <form className={styles.form} action="/api/form" method="post">
-            {/* <label htmlFor="first">First Name</label>
-          <input className="input" type="text" id="first" name="first" required />
+            Sign Up
+          </SignUpButton>
 
-          <label htmlFor="second">Last Name</label>
-          <input className="input" type="text" id="last" name="last" required /> */}
+        </FormContainer>
+        {/* </FormContainer> */}
 
-            <label htmlFor="third">
-              <input
-                className="input" type="text" id="email" style={{ borderRadius: '4px', fontFamily: 'Roboto', borderColor: 'white' }} placeholder='Enter your email' />
-            </label>
-
-            {/* <label htmlFor="last">Message</label>
-          <input className="input" type="text" id="email" required /> */}
-
-            <br />
-
-            <button
-              className={styles.form} style={{ width: '4%', borderRadius: '4px', backgroundColor: 'red', fontFamily: 'Roboto', color: 'white', borderColor: 'transparent' }} type="submit">Sign Up</button>
-          </form>
-        </div>
-
-        <div>
-          
-        </div>
-
-      </div>
-    </div>
+      </ContactUsContainer>
+      
+    </HeaderContainer>
   )
 }

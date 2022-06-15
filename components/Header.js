@@ -1,24 +1,31 @@
 import Link from "next/link";
-import styles from '../styles/Home.module.css';       
+import styled from 'styled-components';
 
-    
+const HeaderContainer = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 40px
+   
+;
+`;
+
+const LogoImage = styled.img`
+    width: 320px;
+    // align-items: center;
+    display: block;
+    cursor: pointer;
+    // margin-bottom: 20px;
+`;
 
 function Header() {
     return (
-        <div className={styles.SkoloLogo}>
-            <div>
-                <Link 
-                    style={{backgroundColor: "transparent", border: "none"}}          
-                    class="home" 
-                    href="/">
-                    <img 
-                        className={styles.SkoloLogo} 
-                        src="SkoloNoBGWhite.png" 
-                        alt="Skolo"
-                        />                        
-                </Link>
-            </div>
-        </div>
+        <HeaderContainer>
+            <Link class="home" href="/">
+                <LogoImage src="CroppedSkoloLogo2.png" alt="Skolo" />
+            </Link>
+        </HeaderContainer>
         )
     }
 
