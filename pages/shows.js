@@ -23,7 +23,8 @@ const InfoContainer = styled.div`
     // align-items: left;
     // width: auto; 
     // margin-right: auto;
-    margin-left: 50px ;
+    margin-left: 120px ;
+    transform: scale(1.30);
     
 `;
 

@@ -29,6 +29,7 @@ const MusicImage = styled.img`
 `;
 
 const Listen = styled.h1`
+    font-size: 40px;
     font-family: BebasNeue; 
 `;
 

@@ -20,7 +20,19 @@ const AboutContainer = styled.div`
 `;
 
 const InfoContainer = styled.p`
+    text-align: right;
+`;
+
+const LabelLinks = styled.a`
+    color: white;
+    // padding: 0px 5px 0px 5px;
     
+`;
+
+const LinkText = styled.text`
+    -moz-text-shadow: 0 0 8px #fff;
+    -webkit-text-shadow: 0 0 8px #fff;
+    text-shadow: 0px 0px 8px #fff;
 `;
 
 
@@ -37,22 +49,23 @@ function About() {
             </AboutContainer>           
                 <InfoContainer id="skolo-bio">Skolo is a House/ Tech House / Progressive House/ Melodic techno/ Indie Dance producer and DJ from San Diego, CA with current releases on
                 &nbsp; 
-                    <a id="inStereo-link" href="https://www.facebook.com/instereorecordings" 
-                        style={{ color: 'white', textDecoration: 'underline' }}>
-                            InStereo
-                    </a>,
+                    <LabelLinks id="inStereo-link" href="https://www.facebook.com/instereorecordings" 
+                    >
+                        <LinkText>InStereo</LinkText> 
+
+                    </LabelLinks>,
                 &nbsp; 
-                    <a id="wyldCard-link" href="https://www.facebook.com/WyldCardRecords" 
-                        style={{ color: 'white', textDecoration: 'underline' }}>
-                            WyldCard
-                    </a>
+                    <LabelLinks id="wyldCard-link" href="https://www.facebook.com/WyldCardRecords" 
+                    >
+                        <LinkText>WyldCard</LinkText> 
+                    </LabelLinks>
                 &nbsp; 
                     and
                     &nbsp;
-                    <a href="https://www.facebook.com/latenightmunchiesmusic" 
-                        style={{ color: 'white', textDecoration: 'underline' }}>
-                            Late Night Munchies
-                    </a>
+                    <LabelLinks href="https://www.facebook.com/latenightmunchiesmusic" 
+                    >
+                        <LinkText>Late Night Munchies</LinkText> 
+                    </LabelLinks>
                 </InfoContainer>            
         </HeaderContainer>
         </ClientOnly>

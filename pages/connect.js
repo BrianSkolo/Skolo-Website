@@ -8,6 +8,7 @@ const HeaderContainer = styled.div`
       flex-direction: column;
       align-items: center;
       width: 100%; 
+      // height: 100%
       border-width:2px;
       margin-top: 75px;
       color: white;
