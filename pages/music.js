@@ -68,7 +68,8 @@ function BeatportLink() {
                     <a target="blank" href="https://music.apple.com/us/artist/skolo/1482772924">
                         <MusicImage  
                             id="appleMusic-image"                          
-                            src="AMLogoNoBG.png"                           alt="Apple Music" 
+                            src="AMLogoNoBG.png"                     
+                            alt="Apple Music" 
                         />
                     </a>
                                          
