@@ -12,6 +12,7 @@ const FooterContainer = styled.body`
     color: white;
     background-color: grey;
     height:100vh
+   
     // margin-top: 50px;
     margin: 0;
     // margin-bottom: 50px;
