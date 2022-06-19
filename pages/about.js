@@ -22,8 +22,8 @@ const AboutContainer = styled.div`
 
 const InfoContainer = styled.p`
     text-align: right;
-    margin-left: 30px;
-    margin-right: 60px;
+    // margin-left: 50px;
+    margin-right: 70px;
 `;
 
 const LabelLinks = styled.a`

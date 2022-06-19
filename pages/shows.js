@@ -22,7 +22,8 @@ const InfoContainer = styled.div`
     // align-items: left;
     // width: auto; 
     // margin-right: auto;
-    margin-left: 120px ;
+    margin-top: 20px;
+    margin-left: 150px ;
     transform: scale(1.30);
     margin-bottom: 50px;
 `;
@@ -34,7 +35,8 @@ const ImageContainer = styled.div`
     // align-items: right;
     // width: 100%; 
     margin-left: auto;
-    margin-right: 45px ;
+    margin-right: 90px ;
+    margin-bottom: 10
 
 `;
 

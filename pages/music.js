@@ -14,9 +14,9 @@ const HeaderContainer = styled.div`
      
 `;
 const LinksContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;                    
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;                    
 `;
 
 const MusicImage = styled.img`
@@ -32,45 +32,51 @@ const Listen = styled.h1`
     font-family: BebasNeue; 
 `;
 
+const ListenLinks = styled.h1`
+    // height: 50px;
+    // width: 50px;
+    zoom: 75%;
+
+`;
 
 function BeatportLink() {
   
     return (
         <HeaderContainer id="header-container">
             <Listen id="listen">Listen:</Listen>
-            <LinksContainer>
-                <a target="blank" href="https://www.beatport.com/artist/skolo/978581">
+            <LinksContainer id='links-container'>
+                <ListenLinks target="blank" href="https://www.beatport.com/artist/skolo/978581">
                     <MusicImage
                         id="beatport-image"
                         src="BeatportNoBG4.png"
                         alt="Beatport"
                         style={{ paddingTop: '0px' }}
                     />
-                </a>
+                </ListenLinks>
 
-                <a target="blank" href="https://www.traxsource.com/artist/612812/skolo">
+                <ListenLinks target="blank" href="https://www.traxsource.com/artist/612812/skolo">
                     <MusicImage
                         id="traxsource-image"
                         src="TraxsourceNoBGCroppedSmaller.png"
                         alt="Traxsource"
 
                     />
-                </a>
+                </ListenLinks>
 
-                <a target="blank" href="https://music.apple.com/us/artist/skolo/1482772924">
+                <ListenLinks target="blank" href="https://music.apple.com/us/artist/skolo/1482772924">
                     <MusicImage
                         id="appleMusic-image"
                         src="AMLogoNoBG.png"
                         alt="Apple Music"
                     />
-                </a>
+                </ListenLinks>
 
-                <a target="blank" href="https://open.spotify.com/artist/3E2JNTaM9NCiwA2TjvyxHw">
+                <ListenLinks target="blank" href="https://open.spotify.com/artist/3E2JNTaM9NCiwA2TjvyxHw">
                     <MusicImage
                         id="spotify-image"
                         src="SpotifyNoBG2.png"
                         alt="Spotify" />
-                </a>
+                </ListenLinks>
             </LinksContainer>
         </HeaderContainer>
     )

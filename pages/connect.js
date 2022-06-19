@@ -83,6 +83,21 @@ const SignUpButton = styled.button`
     border-color: transparent;
 `;
 
+const SocialMediaLinks = styled.div`
+    width: 320px;
+    margin: 27.5px 0px 10px 177.5px;
+    cursor: pointer;   
+`;
+
+const SocialMediaImage = styled.img`
+    height: 50px;
+    width: 50px;
+    margin-left: 0;
+  
+    margin: 0 10px;
+    zoom: 70%;
+`;
+
 
 
 
@@ -118,8 +133,7 @@ export default function Form() {
           </Link>
         </DatesContainer>
 
-        <ContactUsContainer id="contactUs-container">
-          
+        <ContactUsContainer id="contactUs-container">          
           <CommunityNewsContainer id="communityNews-container">
             <h1
               id="Community News"
@@ -155,8 +169,19 @@ export default function Form() {
               Sign Up
             </SignUpButton>
           </FormContainer>
-
         </ContactUsContainer>
+
+        <SocialMediaLinks>
+          <Link href="https://www.facebook.com/SkoloMusic">
+              <SocialMediaImage src="FaceBookSquareResize.png" alt="Facebook" />
+          </Link>
+          <Link href="https://www.instagram.com/skolomusicsd/">
+              <SocialMediaImage src="InstaGramSquareResize.png" alt="Instagram" />
+          </Link>
+          <Link className="example" href="https://soundcloud.com/skolomusic">
+              <SocialMediaImage src="SoundCloudCircleResize.png" alt="Sound Cloud" />
+          </Link>
+      </SocialMediaLinks>
 
       </HeaderContainer>
   )
