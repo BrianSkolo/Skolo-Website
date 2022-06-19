@@ -1,71 +1,93 @@
 import styled from 'styled-components';
 import Link from "next/link";
-import ClientOnly from "./clientOnly";
 
+const SOCIAL_MEDIA_ICON_SIZE = '50px';
 
-
-const FooterContainer = styled.body`  
-    display: flex;    
+const FooterContainer = styled.div`
+    display: flex;
     flex-direction: column;
-    // flex-direction: row;
-    width: 100%;
-    color: white;
     background-color: grey;
-    height:100vh
-   
-    // margin-top: 50px;
-    margin: 0;
-    // margin-bottom: 50px;
-    
-`;
+    color: white;
+    padding: 32px 18px;
 
-const FooterMain = styled.section`
-    padding: 1.25rem 1.875rem;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    // justify-content: space-around;
-    justify-content: space-evenly;
-    
-`;
-
-const FooterMainColumn = styled.div`
-    padding: 1.25rem;
-    min-width: 12.5rem
-`;
-
-const FooterTitles = styled.h2`
-    
-`;
-
-const LinksContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-`;
-
-const Contact = styled.div`
-
+    h1 {
+        margin-top: 10px;
+        margin-bottom: 0;
+        padding-bottom: 26px;
+    }
 `;
 
 const LogoImage = styled.img`
-    width: 200px;
+    width: 320px;
+    // align-items: center;
     display: block;
     cursor: pointer;
-    margin-top: 35px;
+    // margin-bottom: 20px;
 `;
 
-const Explore = styled.ul`
-    // display: flex;
-    // flex-direction: column;
+const FirstColumn = styled.div`
+    flex: 1;
+    
+`;
+
+const SkoloLogo = styled.div`
+    
+`;
+
+
+
+
+const Explore = styled.div`
+    display: flex;
+    flex-direction: column;
    
-    
-    
 `;
 
+const Contact = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+
+const StayUpdated = styled.div`
+
+`;
+
+const SecondColumn = styled.div`
+    flex: 1;
+    text-align: center; 
+   
+
+`;
+
+const ThirdColumn = styled.div`
+    Flex: 1;
+    text-align: center; 
+`;
+
+const CopyRight = styled.div`
+
+`;
+
+
+const CopyRightInfo = styled.div`
+    margin-left: 400px;
+`;
+
+const FourthColumn = styled.div`
+    Flex: 1;
+    text-align: center; 
+`;
 
 const FormContainer = styled.div`
+display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width:100%
+`;
+
+const SignUpButton = styled.div`
 
 `;
 
@@ -73,126 +95,116 @@ const Input = styled.input`
 
 `;
 
-const CopyWrightContainer = styled.div`
-    // margin-top: auto;
-    // margin-left: auto;
-    // // margin-right: auto;
+const RowOne = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%
 `;
 
-const SignUpButton = styled.div`
-
+const RowTwo = styled.div`
+    display: flex;
+    flex-direction: row;
+    width 100%
 `;
 
-// const Main = styled.section`
-
-// `;
-
-const Social = styled.section`
-    color: white
+const SocialMediaLinks = styled.div`
+    
+   
 `;
 
+const SocialMediaImage = styled.img`
+    height: ${SOCIAL_MEDIA_ICON_SIZE};
+    width: ${SOCIAL_MEDIA_ICON_SIZE};
+    margin-left: 0;
+    margin: 0 10px;
+`;
 
-const Legal = styled.section`
-
+const RowThree = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    
 `;
 
 
 function Footer() {
-    return(
-        <FooterContainer className="footer-container" id='footer-container'>
-            <FooterMain id="footer-main">
-            <FooterMainColumn id="footer-main-column">
-            
-                <Link class="home" href="/" id="link">
-                    <LogoImage src="CroppedSkoloLogo2.png" alt="Skolo" id="skolo-image" />
-                </Link>
 
-            </FooterMainColumn>
-
-            <FooterMainColumn id="footer-main-column">
-                <Explore id="explore">
-                <FooterTitles class="ft-title">Explore</FooterTitles>
-                <Link href="/">Home</Link>
-                <Link href="/about">About</Link>
-                <Link href="/shows">Show</Link>
-                <Link href="/music">Music</Link>
-                <Link href="/connect">Contact</Link>
-                </Explore>
-            </FooterMainColumn>
-
-            <FooterMainColumn id="footer-main-column">
-                <Contact id="footer-contact">
-                <FooterTitles class="ft-title">Contact</FooterTitles>
-                <a id="email-link" href='brianmillarsd@gmail.com'>brianmillarsd@gmail.com</a>
-                </Contact>
-            </FooterMainColumn>
-
-            <FooterMainColumn id="footer-main-column">
-                <FooterTitles class="ft-title">Stay Updated</FooterTitles>
-                <p>Subscribe to get latest Skolo News</p>
-                <FormContainer 
-                    id="form-container" 
-                    
-                    action="/api/form" method="post"
-                >
-                <label htmlFor="third">
-                <Input
-                    type="text"
-                    id="email"
-                    placeholder='Enter your email' 
-                />
-                </label>
-
-                <SignUpButton
-                    id="signUp-button"
-                    type="submit">
-
-                    Sign Up
-
-                </SignUpButton>
-                </FormContainer>
-            </FooterMainColumn>
-                           
-            <FooterMainColumn id="footer-main-column">
+    return (
         
-            <Social id="social-media-links">
-                <FooterTitles>Social Media Links</FooterTitles>
-                <LinksContainer>
-                <a id="facebook-link" href='https://www.facebook.com/SkoloMusic'>
-                    <image 
-                        id="facebook-image"                          
-                        src="FaceBookSquare.png"                     
-                        alt="Facebook Link" 
-                    />
-                </a>
-                <a id="instagram-link" href='https://www.instagram.com/skolomusicsd'>
-                    <image
-                        id="instagram-image"                          
-                        src="InstaGramSquare.png"                     
-                        alt="instagram Link" 
-                    />
-                </a>
-                <a id="facebook-link" href='https://soundcloud.com/skolomusic'>
-                    <image></image>
-                </a>
-                </LinksContainer>
-            </Social>
+            <FooterContainer>
+                <RowOne>
+                    <FirstColumn>
+                        <SkoloLogo>
+                            <Link href="/">
+                                <LogoImage src="CroppedSkoloLogo2.png" alt="Skolo" />
+                            </Link>
+                        </SkoloLogo>
+                    </FirstColumn>
+                    <SecondColumn>
+                        <Explore>
+                            <h1>Explore</h1>
+                            <Link href="/">Home</Link>
+                            <Link href="/about">About</Link>
+                            <Link href="/shows">Show</Link>
+                            <Link href="/music">Music</Link>
+                            <Link href="/connect">Contact</Link>
+                        </Explore>
+                    </SecondColumn>
 
-            </FooterMainColumn>
+                    <ThirdColumn>
+                        <Contact>
+                            <h1>Contact</h1>
+                            <a id="email-link" href='brianmillarsd@gmail.com'>brianmillarsd@gmail.com</a>
+                        </Contact>
+                    </ThirdColumn>
 
-            <FooterMainColumn id="footer-main-column">
-           
-            <Legal>            
+                    <FourthColumn>
+                        <StayUpdated>
+                            <h1>Stay Updated</h1>
+                            <FormContainer id="form-container" action="/api/form" method="post">
+                                <label htmlFor="third">
+                                    <Input
+                                        type="text"
+                                        id="email"
+                                        placeholder='Enter your email'
+                                    />
+                                </label>
 
-            <CopyWrightContainer>
-                    <p style={{ marginLeft: '400px' }}>&copy; 2022 Skolo. All Rights Reserved.</p>
-                </CopyWrightContainer>
-            </Legal>
-            </FooterMainColumn>
-            </FooterMain>
-      
-            
+                                <SignUpButton
+                                    id="signUp-button"
+                                    type="submit">
+
+                                    Sign Up
+
+                                </SignUpButton>
+                            </FormContainer>
+                        </StayUpdated>
+                    </FourthColumn>
+                </RowOne>
+
+                <RowTwo>
+                    <SocialMediaLinks>
+
+                        <Link href="/">
+                            <SocialMediaImage src="FaceBookSquareResize.png" alt="Facebook" />
+                        </Link>
+                        <Link href="/">
+                            <SocialMediaImage src="InstaGramSquareResize.png" alt="Instagram" />
+                        </Link>
+                        <Link className="example" href="/">
+                            <SocialMediaImage src="SoundCloudCircleResize.png" alt="Sound Cloud" />
+                        </Link>
+
+                    </SocialMediaLinks>
+                </RowTwo>
+                <RowThree>
+                    <CopyRight>
+                        <CopyRightInfo>&copy; 2022 Skolo. All Rights Reserved.</CopyRightInfo>
+                    </CopyRight>
+                </RowThree>
             </FooterContainer>
+        
     )
 }
 

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styled from 'styled-components';
-import ClientOnly from "./clientOnly";
 
 const HeaderContainer = styled.div`
     display: flex;
@@ -21,14 +20,13 @@ const LogoImage = styled.img`
 `;
 
 function Header() {
+    
     return (
-        <ClientOnly>
         <HeaderContainer>
-            <Link class="home" href="/">
+            <Link className="home" href="/">
                 <LogoImage src="CroppedSkoloLogo2.png" alt="Skolo" />
             </Link>
         </HeaderContainer>
-        </ClientOnly>
         )
     }
 

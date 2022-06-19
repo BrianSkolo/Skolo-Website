@@ -160,8 +160,7 @@
   flex-wrap: wrap;
   justify-content: center; 
   align-content: space-evenly;
-  height: 10;
-  width: 2000px;
+
   /* transform: scale(1.5) */
   
  
@@ -303,6 +302,12 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+@media screen and (max-width: 600px)
+{
+  
+}
+
 
 
 

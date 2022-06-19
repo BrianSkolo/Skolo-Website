@@ -1,7 +1,6 @@
-import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import styled from 'styled-components';
-import ClientOnly from '../components/clientOnly';
+// import ClientOnly from '../components/clientOnly';
 
 
 const HeaderContainer = styled.div`
@@ -25,7 +24,7 @@ const InfoContainer = styled.div`
     // margin-right: auto;
     margin-left: 120px ;
     transform: scale(1.30);
-    
+    margin-bottom: 50px;
 `;
 
 const ImageContainer = styled.div`
@@ -54,29 +53,22 @@ const EventImage = styled.img`
 `;
 
 const UpcomingShows = styled.h1`
-    font-family: BebasNeue;     
+    font-family: BebasNeue;
 `;
-
-const InfoParagraph = styled.p`
-    margin-bottom: 50px; 
-`; 
-
-
-
 
 
 function Shows() {
+
     return (
-        <ClientOnly id="styled-components-render">
         <HeaderContainer id="shows-container">
-           <InfoContainer id="info-container">
-           <InfoParagraph>
+            <InfoContainer id="info-container">
+
                 <UpcomingShows id="upcoming-shows">
-                                           
-                        Upcoming Shows:
-                        
+
+                    Upcoming Shows:
+
                 </UpcomingShows>
-                
+
                 <p id="title">
                     The Unicorns and The Cruz Coalition Presents: In Unicorns We Trust
                 </p>
@@ -87,8 +79,7 @@ function Shows() {
                 <p id="date">
                     July 3, 2022
                 </p>
-                </InfoParagraph>
-        </InfoContainer>
+            </InfoContainer>
 
             <ImageContainer id="image-container">
 
@@ -96,38 +87,11 @@ function Shows() {
                     <EventImage
                         id="image"
                         src="Unicorns.jpg"
-                        
-                    
-                        // width="100%"
-                        // height="100%"
-                        // object-fit="contain"
                     />
                 </Link>
-
             </ImageContainer>
-
         </HeaderContainer>
-        </ClientOnly>
     )
-
 }
-
-// const myLoader = ({ src, width, quality }) => {
-//     return `${src}?w=${width}&q=${quality || 75}`
-// } 
-
-// const UnicornFlyer = (props) => {
-//     return (
-//         <Image 
-//         loader={myLoader}
-//         scr={Unicorns}
-//         alt="In Unicorns We Trust"
-//         width={500}
-//         height={500}
-//         />
-//     )
-// }
-
-
 
 export default Shows

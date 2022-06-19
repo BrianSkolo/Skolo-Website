@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css';
 import Link from "next/link";
 import styled from 'styled-components';
-import ClientOnly from '../components/clientOnly';
+// import ClientOnly from '../components/clientOnly';
 
 const HeaderContainer = styled.div`
       display: flex;
@@ -88,92 +88,76 @@ const SignUpButton = styled.button`
 
 
 export default function Form() {
+ 
   return (
-    <ClientOnly id="styled-components-render">
-    <HeaderContainer id="header-container">
+   
+      <HeaderContainer id="header-container">
 
-      {/* tour dates */}
-      <DatesContainer id="dates-container">
+        <DatesContainer id="dates-container">
+          <TourDates id="tour" style={{ marginBottom: '0px' }}>
+            Tour
+          </TourDates>
 
-        <TourDates id="tour" style={{ marginBottom: '0px' }}>
-          Tour
-        </TourDates>
+          <TourDates id="dates" style={{ marginTop: '0px', marginBottom: '15px' }}>
+            Dates
+          </TourDates>
+          
+         
+          <Link id="ticket-link" className="shows" href="/shows">
+            <TixButton
+              id="ticket-button"
+              style={{
+                borderWidth: '1px',
+                borderStyle: 'solid',
+                padding: '5px',
+                borderRadius: '4px',
+                transform: 'scale(1.5)'
+              }}>
+              Purchase Tickets
+            </TixButton>
+          </Link>
+        </DatesContainer>
 
-        <TourDates id="dates" style={{ marginTop: '0px', marginBottom: '15px' }}>
-          Dates
-        </TourDates>
+        <ContactUsContainer id="contactUs-container">
+          
+          <CommunityNewsContainer id="communityNews-container">
+            <h1
+              id="Community News"
+              style={{
+                fontFamily: 'BebasNeue',
+                transform: 'scale(2)',
+                marginTop: 0,
+                marginBottom: '10px'
+              }}>
+              Community News
+            </h1>
 
+            <h2
+              id="subscribe-text"
+              style={{
+                fontSize: '20px',
+                marginBottom: '25px'
+              }}>
+              Subscribe with your email address to keep up with the latest Skolo news, events, and exclusives via email.
+            </h2>
+          </CommunityNewsContainer >
 
-        {/* purchase tickets */}
-        <Link id="ticket-link" class="shows" href="/shows">
-          <TixButton 
-            id="ticket-button"
-            style={{
-              borderWidth: '1px',
-              borderStyle: 'solid',
-              padding: '5px',
-              borderRadius: '4px',
-              transform: 'scale(1.5)'
-            }}>
+          <FormContainer id="form-container" className={styles.form} action="/api/form" method="post">
+            <label htmlFor="third">
+              <Input
+                type="text"
+                id="email"
+                placeholder='Enter your email' />
+            </label>
+            <SignUpButton
+              id="signUp-button"
+              type="submit">
+              Sign Up
+            </SignUpButton>
+          </FormContainer>
 
-            Purchase Tickets
+        </ContactUsContainer>
 
-          </TixButton>
-        </Link>
-      </DatesContainer>
-
-      {/* email header */}
-      <ContactUsContainer id="contactUs-container">
-        <CommunityNewsContainer id="communityNews-container">
-
-          <h1
-            id="Community News"
-            style={{
-              fontFamily: 'BebasNeue',
-              transform: 'scale(2)',
-              marginTop: 0,
-              marginBottom: '10px'
-            }}>
-
-            Community News
-          </h1>
-
-
-          <h2
-            id="subscribe-text"
-            style={{
-              fontSize: '20px',
-              marginBottom: '25px'
-            }}>
-
-            Subscribe with your email address to keep up with the latest Skolo news, events, and exclusives via email.
-
-          </h2>
-
-
-        </CommunityNewsContainer >
-        
-        <FormContainer id="form-container" className={styles.form} action="/api/form" method="post">
-          <label htmlFor="third">
-            <Input
-              type="text"
-              id="email"
-              placeholder='Enter your email' />
-          </label>
-
-          <SignUpButton
-            id="signUp-button"
-            type="submit">
-
-            Sign Up
-          </SignUpButton>
-
-        </FormContainer>
-        {/* </FormContainer> */}
-
-      </ContactUsContainer>
-      
-    </HeaderContainer>
-    </ClientOnly>
+      </HeaderContainer>
   )
 }

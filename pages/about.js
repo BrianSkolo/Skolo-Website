@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css';
 import styled from 'styled-components';
-import ClientOnly from '../components/clientOnly';
+// import ClientOnly from '../components/clientOnly';
 
 const HeaderContainer = styled.div`
     font-size: x-large; 
@@ -8,6 +8,7 @@ const HeaderContainer = styled.div`
     padding-left: 20px;
     padding-right: 20px;
     color: white;
+    margin-top; auto;
 `;
 
 const AboutContainer = styled.div`
@@ -21,6 +22,8 @@ const AboutContainer = styled.div`
 
 const InfoContainer = styled.p`
     text-align: right;
+    margin-left: 30px;
+    margin-right: 60px;
 `;
 
 const LabelLinks = styled.a`
@@ -29,10 +32,20 @@ const LabelLinks = styled.a`
     
 `;
 
-const LinkText = styled.text`
+const LinkText = styled.span`
     -moz-text-shadow: 0 0 8px #fff;
     -webkit-text-shadow: 0 0 8px #fff;
-    text-shadow: 0px 0px 8px #fff;
+    text-shadow: 0px 0px 8px #fff
+`;
+
+const AboutTitle = styled.h1`
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // width: 100%; 
+    font-family: BebasNeue;
+    // font-size: 70px;
+    // margin-bottom: 0px
 `;
 
 
@@ -41,34 +54,31 @@ const LinkText = styled.text`
 // `;
 
 function About() {
+    
     return (
-        <ClientOnly>
-        <HeaderContainer id="about_page">
-            <AboutContainer id="about-container">
-                <h1 id="about-text" style={{ fontFamily: 'BebasNeue'}}>About:</h1>
-            </AboutContainer>           
+      
+            <HeaderContainer id="about_page">
+                <AboutContainer id="about-container">
+                    <AboutTitle>About:</AboutTitle>
+                </AboutContainer>
                 <InfoContainer id="skolo-bio">Skolo is a House/ Tech House / Progressive House/ Melodic techno/ Indie Dance producer and DJ from San Diego, CA with current releases on
-                &nbsp; 
-                    <LabelLinks id="inStereo-link" href="https://www.facebook.com/instereorecordings" 
-                    >
-                        <LinkText>InStereo</LinkText> 
-
+                    &nbsp;
+                    <LabelLinks id="inStereo-link" href="https://www.facebook.com/instereorecordings">                   
+                       <LinkText color="red" > InStereo </LinkText>
                     </LabelLinks>,
-                &nbsp; 
-                    <LabelLinks id="wyldCard-link" href="https://www.facebook.com/WyldCardRecords" 
-                    >
-                        <LinkText>WyldCard</LinkText> 
+                    &nbsp;
+                    <LabelLinks id="wyldCard-link" href="https://www.facebook.com/WyldCardRecords">                   
+                       <LinkText color="red" > WyldCard </LinkText>
                     </LabelLinks>
-                &nbsp; 
+                    &nbsp;
                     and
                     &nbsp;
-                    <LabelLinks href="https://www.facebook.com/latenightmunchiesmusic" 
-                    >
-                        <LinkText>Late Night Munchies</LinkText> 
+                    <LabelLinks href="https://www.facebook.com/latenightmunchiesmusic">
+                        <LinkText color="red" > Late Night Munchies </LinkText>
                     </LabelLinks>
-                </InfoContainer>            
-        </HeaderContainer>
-        </ClientOnly>
+                </InfoContainer>
+            </HeaderContainer>
+       
     )
 }
 

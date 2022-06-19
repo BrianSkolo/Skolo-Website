@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from 'styled-components';
-import ClientOnly from "./clientOnly";
+
 
 const NavContainer = styled.nav`
     display: flex;
@@ -22,8 +22,9 @@ const NavLink = styled.a`
 
 
 function Navbar() {
+  
   return (
-    <ClientOnly>
+  
     <NavContainer>
       <Link href="/"><NavLink>Home</NavLink></Link>
       <Link href="/about"><NavLink>About</NavLink></Link>
@@ -31,7 +32,7 @@ function Navbar() {
       <Link href="/music"><NavLink>Music</NavLink></Link>
       <Link href="/connect"><NavLink>Contact</NavLink></Link>
     </NavContainer>
-    </ClientOnly>
+  
   )
 }
 
