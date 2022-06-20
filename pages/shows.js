@@ -6,37 +6,29 @@ import styled from 'styled-components';
 const HeaderContainer = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%; 
     border-width:2px;
-    margin-top: 125px;
-   
+    margin-top: 125px;  
     color: white;
-    // align-self: flex-end;
-    // justify-content: flex-start;
+ 
 `;
 
 const InfoContainer = styled.div`
     display: flex;
-    flex-direction: row;
-    // align-items: left;
-    // width: auto; 
-    // margin-right: auto;
-    margin-top: 20px;
-    // margin-left: 245px ;
-    // transform: scale(1.30);
+    flex-direction: column;
     margin-bottom: 50px;
+    padding-right: 60px;
+    margin-bottom: 10px;
+    transform: scale(1.1);
 `;
 
 const ImageContainer = styled.div`
-    // display: flex;
-    // flex-direction: row;
-    // align-items: right;
-    // align-items: right;
-    // width: 100%; 
-    margin-left: auto;
-    margin-right: 162.5px ;
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 75px;
 
 `;
 

@@ -303,15 +303,26 @@
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 600px)
+/* @media screen and (max-width: 600px)
 {
   
-}
-
-/* .explore-links {
-  padding: 50px;
 } */
 
+/* .explore-links {
+  padding: 50px; 
+} */
+
+@media screen and (min-width: 769px) {
+  .mobile-layout {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-layout {
+    display: none;
+  }
+}
 
 
 

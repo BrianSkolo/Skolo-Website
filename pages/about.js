@@ -3,10 +3,14 @@ import styled from 'styled-components';
 // import ClientOnly from '../components/clientOnly';
 
 const HeaderContainer = styled.div`
-    font-size: x-large; 
-    padding-top: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; 
+    font-size: x-large;    
+    margin-top: 100px;
+    // padding-left: 20px;
+    // padding-right: 20px;
     color: white;
     margin-top; auto;
 `;
@@ -16,35 +20,30 @@ const AboutContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%; 
-    // font-family: BebasNeue;
-    font-size: 20px;
+    font-size: 20px;  
 `;
 
 const InfoContainer = styled.p`
     display: flex:
+    flex-direction: column;
     text-align: right;
     justify-content: right;
     align-items: right;
-    width: 100%;
-  
-    // margin-left: 50px;
-    // margin-bottom: 0px;
-    // margin-left: -400px;
-    // margin-right: 0px;
-    // padding: 0px;
-    // content: 0px;
+    width: 100%;   
+    padding-right: 165px;
+    margin-bottom:4px;
     
 `;
 const LinksContainer = styled.p`
     display: flex;
+    flex-direction: row;
     text-align: right;
     justify-content: right;
     width: 100%;
     margin: 0;
-    // margin-left: 50px;
-    // margin-right: 140px;
-    // margin-top: 1.5px;
-    // padding: 0px
+    padding-right: 165px;
+    
+
    
 `;
 
@@ -61,13 +60,9 @@ const LinkText = styled.span`
 `;
 
 const AboutTitle = styled.h1`
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // width: 100%; 
+    margin-bottom: 0px;
     font-family: BebasNeue;
-    // font-size: 70px;
-    // margin-bottom: 0px
+    
 `;
 
 
@@ -100,7 +95,7 @@ function About() {
                     <LabelLinks href="https://www.facebook.com/latenightmunchiesmusic">
                         <LinkText color="red" > Late Night Munchies </LinkText>
                     </LabelLinks>
-                    </LinksContainer>                
+                    </LinksContainer>             
             </HeaderContainer>
        
     )
