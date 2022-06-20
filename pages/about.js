@@ -21,9 +21,31 @@ const AboutContainer = styled.div`
 `;
 
 const InfoContainer = styled.p`
+    display: flex:
     text-align: right;
+    justify-content: right;
+    align-items: right;
+    width: 100%;
+  
     // margin-left: 50px;
-    margin-right: 70px;
+    // margin-bottom: 0px;
+    // margin-left: -400px;
+    // margin-right: 0px;
+    // padding: 0px;
+    // content: 0px;
+    
+`;
+const LinksContainer = styled.p`
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    width: 100%;
+    margin: 0;
+    // margin-left: 50px;
+    // margin-right: 140px;
+    // margin-top: 1.5px;
+    // padding: 0px
+   
 `;
 
 const LabelLinks = styled.a`
@@ -62,6 +84,8 @@ function About() {
                     <AboutTitle>About:</AboutTitle>
                 </AboutContainer>
                 <InfoContainer id="skolo-bio">Skolo is a House/ Tech House / Progressive House/ Melodic techno/ Indie Dance producer and DJ from San Diego, CA with current releases on
+                </InfoContainer>
+                <LinksContainer>
                     &nbsp;
                     <LabelLinks id="inStereo-link" href="https://www.facebook.com/instereorecordings">                   
                        <LinkText color="red" > InStereo </LinkText>
@@ -76,7 +100,7 @@ function About() {
                     <LabelLinks href="https://www.facebook.com/latenightmunchiesmusic">
                         <LinkText color="red" > Late Night Munchies </LinkText>
                     </LabelLinks>
-                </InfoContainer>
+                    </LinksContainer>                
             </HeaderContainer>
        
     )

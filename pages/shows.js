@@ -18,13 +18,13 @@ const HeaderContainer = styled.div`
 
 const InfoContainer = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     // align-items: left;
     // width: auto; 
     // margin-right: auto;
     margin-top: 20px;
-    margin-left: 150px ;
-    transform: scale(1.30);
+    // margin-left: 245px ;
+    // transform: scale(1.30);
     margin-bottom: 50px;
 `;
 
@@ -35,8 +35,8 @@ const ImageContainer = styled.div`
     // align-items: right;
     // width: 100%; 
     margin-left: auto;
-    margin-right: 90px ;
-    margin-bottom: 10
+    margin-right: 162.5px ;
+    margin-bottom: 15px;
 
 `;
 
