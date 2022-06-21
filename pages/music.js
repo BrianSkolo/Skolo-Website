@@ -1,30 +1,32 @@
-// import styles from '../styles/Home.module.css';
 import styled from 'styled-components';
-// import ClientOnly from '../components/clientOnly';
+import { Flex, Box, Heading, Button } from 'rebass';
+import styles from '../styles/Home.module.css';
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled(Flex)`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%; 
     border-width:2px;
-    margin-top: 75px;
+    margin-top: 25px;
     color: white;
      
 `;
-const LinksContainer = styled.div`
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;                    
+const LinksContainer = styled(Box)`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    margin-top: -25px;    
 `;
 
 const MusicImage = styled.img`
-    width: 500px;
+    width: 400px;
     display: block;
     cursor: pointer;
     padding: 20px;
-    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-top: 0px;
 `;
 
 const Listen = styled.h1`
@@ -50,7 +52,7 @@ function BeatportLink() {
                         id="beatport-image"
                         src="BeatportNoBG4.png"
                         alt="Beatport"
-                        style={{ paddingTop: '0px' }}
+                        
                     />
                 </ListenLinks>
 
@@ -59,6 +61,7 @@ function BeatportLink() {
                         id="traxsource-image"
                         src="TraxsourceNoBGCroppedSmaller.png"
                         alt="Traxsource"
+                        className={styles.ListenLinksMargin}
 
                     />
                 </ListenLinks>
@@ -75,7 +78,8 @@ function BeatportLink() {
                     <MusicImage
                         id="spotify-image"
                         src="SpotifyNoBG2.png"
-                        alt="Spotify" />
+                        alt="Spotify" 
+                        />
                 </ListenLinks>
             </LinksContainer>
         </HeaderContainer>

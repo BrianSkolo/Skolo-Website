@@ -29,8 +29,6 @@ const LogoImage = styled.img`
 
 const FirstColumn = styled.div`
     flex: 1;
-    
-    
 `;
 
 const Explore = styled.div`
@@ -75,12 +73,22 @@ const FormContainer = styled.div`
     width:100%;
 `;
 
-const SignUpButton = styled.div`
-
+const SignUpButton = styled.button`
+    width: 4%, 
+    border-radius: 4px; 
+    background-color: red; 
+    font-family: Roboto; 
+    color: white; 
+    border-color: transparent;
+    padding: 2px;
 `;
 
 const Input = styled.input`
-
+    border: none;
+    border-radius: 4px; 
+    font-family: Roboto; 
+    border-color: white;
+    padding: 2px;
 `;
 
 const RowOne = styled.div`

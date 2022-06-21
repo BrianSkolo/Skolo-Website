@@ -1,34 +1,66 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-// import ClientOnly from '../components/clientOnly';
+import { Flex, Box, Heading, Button } from 'rebass';
 
 
-const HeaderContainer = styled.div`
+
+const HeaderContainer = styled(Flex)`
     display: flex;
-    flex-direction: row;
+    
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    // align-items: center;
+     flex-wrap: wrap;
     width: 100%; 
-    border-width:2px;
-    margin-top: 125px;  
+    // border-width:2px;
+    margin-top: 60px;  
     color: white;
  
 `;
 
-const InfoContainer = styled.div`
+// const InfoColumns = styled(Flex)`
+//     display: flex;
+//     flex-direction: column;
+// `;
+
+const InfoContainer = styled(Box)`
     display: flex;
+    // justify-content: center;
     flex-direction: column;
-    margin-bottom: 50px;
-    padding-right: 60px;
-    margin-bottom: 10px;
+  
+    width: 100%
+   
+    // margin-bottom: 50px;
+    // padding-right: 60px;
+    // margin-bottom: 10px;
     transform: scale(1.1);
 `;
 
-const ImageContainer = styled.div`
+const UpcomingShows = styled.h1`
     display: flex;
-    flex-direction: row;
-    padding-left: 75px;
+    justify-content: center;
+    flex-direction: column;
+    font-family: BebasNeue;
+    margin: 10px;
+    margin-right: 0px
+    padding: 0px;
+    
+`;
+
+const ShowInfo = styled.div`
+display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    margin-right: 0px
+    padding: 0px;
+`;
+
+const ImageContainer = styled(Box)`
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    // padding-left: 75px;
+    width: 150%;
 
 `;
 
@@ -46,9 +78,7 @@ const EventImage = styled.img`
     
 `;
 
-const UpcomingShows = styled.h1`
-    font-family: BebasNeue;
-`;
+
 
 
 function Shows() {
@@ -63,16 +93,16 @@ function Shows() {
 
                 </UpcomingShows>
 
-                <p id="title">
+                <ShowInfo id="title">
                     The Unicorns and The Cruz Coalition Presents: In Unicorns We Trust
-                </p>
+                </ShowInfo>
 
-                <p id="address">
+                <ShowInfo id="address">
                     6250 Hollywood Blvd, Los Angeles CA
-                </p>
-                <p id="date">
+                </ShowInfo>
+                <ShowInfo id="date">
                     July 3, 2022
-                </p>
+                </ShowInfo>
             </InfoContainer>
 
             <ImageContainer id="image-container">

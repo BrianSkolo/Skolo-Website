@@ -7,9 +7,7 @@ const FooterContainer = styled.div`
     // flex-direction: row;
     width: 100%;
     color: white;
-    background-color: grey;
-    height:100vh
-   
+    background-color: grey;   
     // margin-top: 50px;
     margin: 0;
     // margin-bottom: 50px;

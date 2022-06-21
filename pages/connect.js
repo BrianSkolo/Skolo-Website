@@ -1,25 +1,32 @@
 import styles from '../styles/Home.module.css';
 import Link from "next/link";
 import styled from 'styled-components';
-// import ClientOnly from '../components/clientOnly';
+import { Flex, Box, Heading, Button } from 'rebass';
 
-const HeaderContainer = styled.div`
+// import { Text } from 'rebass/styled-components'
+
+// const TextSize = styled(Text)`
+//   fontSize: {[ 3, 4, 5 ]};
+ 
+// `;
+
+const HeaderContainer = styled(Flex)`
       display: flex;
       flex-direction: column;
+      text-align: center;
       align-items: center;
       width: 100%; 
-      // height: 100%
-      border-width:2px;
-      margin-top: 75px;
       color: white;
+      // height: 100%
+      // border-width:2px;
+      // margin-top: 75px;
+      
       
 `;
 
-const DatesContainer = styled.div`
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%; 
+const TourAndTixContainer = styled(Box)`
+    display: flex;
+    flex-direction: column;  
 `;
 
 const TourDates = styled.h1`
@@ -29,24 +36,44 @@ const TourDates = styled.h1`
     width: 100%; 
     font-family: BebasNeue;
     font-size: 70px;
-    margin-bottom: 0px
-`;
-
-const TixButton = styled.button`
-    color: white;
-    background-color: transparent;
-    font-size: 17px;
-    width: 100px;
-    cursor: pointer;
-    text-align: center;  
+    // margin-top: 20px
+    // margin-bottom: 0px
     
 `;
 
-const CommunityNewsContainer = styled.div`
+const TicketLinkBox = styled(Box)`
+    display: flex:
+    flex-direction: column;
+    justify-content: center;
+    width: 100%
+    // margin: 10px;
+    // margin-top: 10px;  
+`;
+
+const TixButton = styled.button`
+    
+    margin: 0px;
+    color: white;
+    background-color: transparent;
+    justify-content: center;
+    font-size: 17px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;  
+    -moz-text-shadow: 0 0 8px #fff;
+    -webkit-text-shadow: 0 0 8px #fff;
+    text-shadow: 0px 0px 8px #fff
+   
+`;
+
+
+
+const CommunityNewsContainer = styled(Box)`
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%; 
+    
 `;
 
 const ContactUsContainer = styled.div`
@@ -54,7 +81,7 @@ const ContactUsContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%; 
-    margin-top: 125px;
+    margin-top: 90px;
 `;
 
 const FormContainer = styled.div`   
@@ -62,8 +89,6 @@ const FormContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center; 
     align-content: space-evenly;
-    height: 10;
-    width: 2000px;
 `;
 
 const Input = styled.input`
@@ -84,16 +109,19 @@ const SignUpButton = styled.button`
 `;
 
 const SocialMediaLinks = styled.div`
-    width: 320px;
-    margin: 27.5px 0px 10px 177.5px;
+    display: flex:
+    flex-direction: column;
+    width: 100%
+    margin: 10px;
+    margin-top: 25px;  
+    
     cursor: pointer;   
 `;
 
 const SocialMediaImage = styled.img`
     height: 50px;
     width: 50px;
-    margin-left: 0;
-  
+    margin-left: 0; 
     margin: 0 10px;
     zoom: 70%;
 `;
@@ -106,10 +134,9 @@ const SocialMediaImage = styled.img`
 export default function Form() {
  
   return (
-   
-      <HeaderContainer id="header-container">
 
-        <DatesContainer id="dates-container">
+      <HeaderContainer id="header-container">
+        <TourAndTixContainer>
           <TourDates id="tour" style={{ marginBottom: '0px' }}>
             Tour
           </TourDates>
@@ -118,11 +145,11 @@ export default function Form() {
             Dates
           </TourDates>
           
-         
+         <TicketLinkBox>
           <Link id="ticket-link" className="shows" href="/shows">
             <TixButton
-              id="ticket-button"
-              style={{
+               
+                style={{
                 borderWidth: '1px',
                 borderStyle: 'solid',
                 padding: '5px',
@@ -130,10 +157,10 @@ export default function Form() {
                 transform: 'scale(1.5)'
               }}>
               Purchase Tickets
+            
             </TixButton>
           </Link>
-        </DatesContainer>
-
+          </TicketLinkBox>
         <ContactUsContainer id="contactUs-container">          
           <CommunityNewsContainer id="communityNews-container">
             <h1
@@ -171,6 +198,7 @@ export default function Form() {
             </SignUpButton>
           </FormContainer>
         </ContactUsContainer>
+        </TourAndTixContainer>
 
         <SocialMediaLinks>
           <Link href="https://www.facebook.com/SkoloMusic">
@@ -185,5 +213,6 @@ export default function Form() {
       </SocialMediaLinks>
 
       </HeaderContainer>
+
   )
 }
