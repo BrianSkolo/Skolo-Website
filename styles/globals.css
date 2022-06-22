@@ -29,3 +29,16 @@ a {
   src:url("../public/fonts/Roboto-Medium.woff2") format("woff2"),url("../public/fonts/Roboto-Medium.woff") format("woff");
   font-style:normal;font-weight:400;
 }
+
+/* @media screen and (min-width: 200px) {
+  .Layout {
+    display: none;
+    background-color: blue;
+  }
+} */
+
+/* @media screen and (max-width: 768px) {
+  .desktop-layout {
+    display: none;
+    color: blue;
+  } */

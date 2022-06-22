@@ -3,55 +3,38 @@ import Link from "next/link";
 import styled from 'styled-components';
 import { Flex, Box, Heading, Button } from 'rebass';
 
-// import { Text } from 'rebass/styled-components'
 
-// const TextSize = styled(Text)`
-//   fontSize: {[ 3, 4, 5 ]};
- 
-// `;
 
-const HeaderContainer = styled(Flex)`
-      display: flex;
+const HeaderContainerFlex = styled(Flex)`
       flex-direction: column;
       text-align: center;
-      align-items: center;
       width: 100%; 
-      color: white;
-      // height: 100%
-      // border-width:2px;
-      // margin-top: 75px;
-      
-      
+      color: white;  
+      position: relative;
+      top: 10px
+
 `;
 
-const TourAndTixContainer = styled(Box)`
-    display: flex;
-    flex-direction: column;  
+const TourAndTixBox = styled(Box)`
+    // flex-direction: column;  
+   
 `;
 
 const TourDates = styled.h1`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    // flex-direction: column;
+    // align-items: center;
     width: 100%; 
     font-family: BebasNeue;
     font-size: 70px;
-    // margin-top: 20px
-    // margin-bottom: 0px
-    
 `;
 
-const TicketLinkBox = styled(Box)`
-    display: flex:
+const TicketLinkBox = styled(Box)`   
     flex-direction: column;
     justify-content: center;
-    width: 100%
-    // margin: 10px;
-    // margin-top: 10px;  
+    width: 100% 
 `;
 
-const TixButton = styled.button`
-    
+const TixButton = styled.button`   
     margin: 0px;
     color: white;
     background-color: transparent;
@@ -65,30 +48,26 @@ const TixButton = styled.button`
     text-shadow: 0px 0px 8px #fff
    
 `;
+const ContactUsContainer = styled(Box)`
+    position: relative;
+    top: 75px;
+`;
 
 
-
-const CommunityNewsContainer = styled(Box)`
-    display: flex;
+const CommunityNewsContainer = styled.div`
     flex-direction: column;
     align-items: center;
-    width: 100%; 
+    width: 100%;     
+`;
+
+const FormContainer = styled.div`  
     
-`;
-
-const ContactUsContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; 
-    margin-top: 90px;
-`;
-
-const FormContainer = styled.div`   
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center; 
-    align-content: space-evenly;
+    // position: relative
+    // top: 20px
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: center; 
+    // align-content: space-evenly;
 `;
 
 const Input = styled.input`
@@ -108,12 +87,14 @@ const SignUpButton = styled.button`
     border-color: transparent;
 `;
 
-const SocialMediaLinks = styled.div`
-    display: flex:
-    flex-direction: column;
+const SocialMediaLinksBox = styled(Box)`
+    margin-top: 90px;
+   
+  
     width: 100%
-    margin: 10px;
-    margin-top: 25px;  
+    position: relative;
+    top: 20px;
+    
     
     cursor: pointer;   
 `;
@@ -135,8 +116,8 @@ export default function Form() {
  
   return (
 
-      <HeaderContainer id="header-container">
-        <TourAndTixContainer>
+      <HeaderContainerFlex id="header-container">
+        <TourAndTixBox>
           <TourDates id="tour" style={{ marginBottom: '0px' }}>
             Tour
           </TourDates>
@@ -159,8 +140,11 @@ export default function Form() {
               Purchase Tickets
             
             </TixButton>
+            
           </Link>
           </TicketLinkBox>
+          </TourAndTixBox>
+
         <ContactUsContainer id="contactUs-container">          
           <CommunityNewsContainer id="communityNews-container">
             <h1
@@ -168,8 +152,6 @@ export default function Form() {
               style={{
                 fontFamily: 'BebasNeue',
                 transform: 'scale(2)',
-                marginTop: 0,
-                marginBottom: '10px'
               }}>
               Community News
             </h1>
@@ -178,7 +160,6 @@ export default function Form() {
               id="subscribe-text"
               style={{
                 fontSize: '20px',
-                marginBottom: '25px'
               }}>
               Subscribe with your email address to keep up with the latest Skolo news, events, and exclusives via email.
             </h2>
@@ -198,9 +179,8 @@ export default function Form() {
             </SignUpButton>
           </FormContainer>
         </ContactUsContainer>
-        </TourAndTixContainer>
-
-        <SocialMediaLinks>
+        
+        <SocialMediaLinksBox>
           <Link href="https://www.facebook.com/SkoloMusic">
               <SocialMediaImage src="FaceBookSquareResize.png" alt="Facebook" />
           </Link>
@@ -210,9 +190,9 @@ export default function Form() {
           <Link className="example" href="https://soundcloud.com/skolomusic">
               <SocialMediaImage src="SoundCloudCircleResize.png" alt="Sound Cloud" />
           </Link>
-      </SocialMediaLinks>
+      </SocialMediaLinksBox>
 
-      </HeaderContainer>
+      </HeaderContainerFlex>
 
   )
 }

@@ -4,23 +4,26 @@ import { Box, Heading } from 'rebass/styled-components';
 
 
 
-const HeaderContainer = styled(Flex)`
-    font-size: x-large;
+const HeaderContainerFlex = styled(Flex)`
+    flex-direction: column;
+    justify-content: center;
+    // width: 1;  
+    // font-size: x-large;
     color: white;
     text-align: center;
-    align-items = center; 
-    margin-top: 30px; 
-    width: 100%
+    position: relative;
+    top: 5px;
 `;
 
 const AboutTitle = styled.h1`
-    margin-bottom: 0px;
+    position: relative;
+    top: 15px;
     font-family: BebasNeue;  
     width: 100% 
    
 `;
 
-const InfoContainer = styled(Box)`
+const InfoContainerBox = styled(Box)`
     display: flex:
     flex-direction: column;
     width: 100%
@@ -29,7 +32,7 @@ const InfoContainer = styled(Box)`
    
     
 `;
-const LinksContainer = styled(Box)`
+const LinksContainerBox = styled(Box)`
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -59,27 +62,27 @@ function About() {
     
     return (
       
-            <HeaderContainer width={1} justifyContent="center" flexDirection="column">
+            <HeaderContainerFlex width={[1, 1, 0.5, 1]} fontSize={[ 2, 3, 4, 5 ]}>
                 <AboutTitle>About:</AboutTitle>
-                <InfoContainer id="skolo-bio">Skolo is a House/ Tech House / Progressive House/ Melodic techno/ Indie Dance producer and DJ from San Diego, CA with current releases on
-                </InfoContainer>
-                <LinksContainer>
-                    {/* &nbsp; */}
+                <InfoContainerBox id="skolo-bio">Skolo is a House/ Tech House / Progressive House/ Melodic techno/ Indie Dance producer and DJ from San Diego, CA with current releases on
+                </InfoContainerBox>
+                <LinksContainerBox>               
                     <LabelLinks id="inStereo-link" href="https://www.facebook.com/instereorecordings">                   
-                       <LinkText color="red" > InStereo </LinkText>
-                    </LabelLinks>,
-                    {/* &nbsp; */}
-                    <LabelLinks id="wyldCard-link" href="https://www.facebook.com/WyldCardRecords">                   
-                       <LinkText color="red" > WyldCard </LinkText>
+                       <LinkText color="red" > InStereo, </LinkText>
                     </LabelLinks>
-                    {/* &nbsp; */}
+                   
+                    <LabelLinks id="wyldCard-link" href="https://www.facebook.com/WyldCardRecords">                   
+                       <LinkText color="red" > WyldCard, </LinkText>
+                    </LabelLinks>
+                 
+                    
                     and
-                    {/* &nbsp; */}
+
                     <LabelLinks href="https://www.facebook.com/latenightmunchiesmusic">
                         <LinkText color="red" > Late Night Munchies </LinkText>
                     </LabelLinks>
-                    </LinksContainer>             
-            </HeaderContainer>
+                    </LinksContainerBox>             
+            </HeaderContainerFlex>
        
     )
 }

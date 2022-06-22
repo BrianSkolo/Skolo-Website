@@ -311,7 +311,7 @@
   padding: 50px; 
 } */
 
-@media screen and (min-width: 769px) {
+/* @media screen and (min-width: 769px) {
   .mobile-layout {
     display: none;
   }
@@ -321,11 +321,15 @@
   .desktop-layout {
     display: none;
   }
-}
+} */
 
 /* .listenLinksMargin {
   margin-top: 100px;
 } */
 
-
+.flexboxContainer1 {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
 

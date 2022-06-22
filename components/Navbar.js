@@ -15,11 +15,8 @@ const NavLink = styled.a`
     width: 100px;
     cursor: pointer;
     text-align: center;
-
-  
+ 
 `;
-
-
 
 function Navbar() {
   

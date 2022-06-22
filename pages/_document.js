@@ -1,4 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import styled from 'styled-components';
+
 
 class MyDocument extends Document {
   render() {
