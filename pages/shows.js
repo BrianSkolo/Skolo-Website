@@ -5,25 +5,16 @@ import { Flex, Box, Heading, Button } from 'rebass';
 
 
 const HeaderContainerFlex = styled(Flex)`
-    flex-direction: column;   
-   
-    // justify-content: center;
-    // align-items: center;
-    //  flex-wrap: wrap;
-    // width: 100%; 
-    // border-width:2px;
-    // margin-top: 60px;  
+    flex-direction: row;
+    flex-wrap: wrap;     
     color: white;
- 
+    position: relative;
+    top: 200px;
 `;
 
-// const InfoColumns = styled(Flex)`
-//     display: flex;
-//     flex-direction: column;
-// `;
-
 const InfoContainerBox = styled(Box)`
-   
+    
+    // margin-left: auto;
     // display: flex;
     // justify-content: center;
     // flex-direction: column;
@@ -42,6 +33,7 @@ const UpcomingShows = styled.h1`
     // flex-direction: column;
     font-family: BebasNeue;
     margin: 0px;
+    
     // margin-right: 0px
     // padding: 0px;
     
@@ -57,7 +49,10 @@ const ShowInfo = styled.div`
 `;
 
 const ImageContainerBox = styled(Box)`
-    flex-direction: column;
+
+    // flex-direction: column;
+    // position: relative;
+    // margin-right: auto;
     // display: flex;
     // justify-content: center;
     // flex-direction: column;
@@ -87,7 +82,7 @@ function Shows() {
 
     return (
         <HeaderContainerFlex id="shows-container">
-            <InfoContainerBox id="info-container">
+            <InfoContainerBox id="info-container"  width={1/2} px={1}>
 
                 <UpcomingShows id="upcoming-shows">
 
@@ -107,7 +102,7 @@ function Shows() {
                 </ShowInfo>
             </InfoContainerBox>
 
-            <ImageContainerBox id="image-container">
+            <ImageContainerBox id="image-container"  width={1/2} px={1}>
 
                 <Link id="link" href="https://www.facebook.com/events/705625483884426">
                     <EventImage

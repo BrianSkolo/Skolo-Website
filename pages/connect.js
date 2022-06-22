@@ -87,15 +87,9 @@ const SignUpButton = styled.button`
     border-color: transparent;
 `;
 
-const SocialMediaLinksBox = styled(Box)`
-    margin-top: 90px;
-   
-  
-    width: 100%
+const SocialMediaLinksBox = styled(Box)` 
     position: relative;
-    top: 20px;
-    
-    
+    top: 100px;    
     cursor: pointer;   
 `;
 

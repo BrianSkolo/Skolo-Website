@@ -1,68 +1,77 @@
 import styles from '../styles/Home.module.css';
-
 import styled from 'styled-components';
 import Link from "next/link";
+import { Flex, Box, Image, Heading, Button } from 'rebass';
 
-const SOCIAL_MEDIA_ICON_SIZE = '50px';
 
-const FooterContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+
+const FooterContainerFlex = styled(Flex)`
+
+    // position: absolute;
+    // right: 0;
+    // bottom:0;
+    // left:0;    
+    padding: 0%;
+    // flex-direction: column;
     background-color: grey;
     color: white;
-    padding: 32px 18px;
-
-    h1 {
-        margin-top: 10px;
-        margin-bottom: 0;
-        padding-bottom: 26px;
-    }
 `;
 
-const LogoImage = styled.img`
-    width: 320px;
-    margin: 10px 10px 10px 52.5px;
-    display: block;
+// const RowOne = styled(Box)`
+//     display: flex;
+//     // flex-direction: column;
+//     // flex-wrap: wrap;
+//     // width:100%
+// `;
+
+const FirstColumn = styled(Box)`
+    flex: .25;
+    text-align: center; 
+    // justify-content: center;
+    // margin-top: 8px; 
+    flex-direction: column;
+    align-items: center;
+`;
+
+const LogoImage = styled(Image)`
+    // width: 320px;
+    // margin: 10px 10px 0px 52.5px;
     cursor: pointer;
-    // margin-bottom: 20px;
+    
 `;
 
-const FirstColumn = styled.div`
-    flex: 1;
+const CopyRightInfo = styled(Box)`
+    // justify-content: center;
+    // margin-right: 87.5px;
+    // margin-top: -73.5px
+    // float: right;
 `;
 
-const Explore = styled.div`
+const SecondColumn = styled(Box)`
+    flex: .25;   
+`;
+
+const ExploreH2 = styled.h2`
+    display: flex;
+    text-align: center; 
+    flex-direction: column;
+    margin: 8px;   
+`;
+
+const LinkList = styled(Box)`
     display: flex;
     flex-direction: column;
-    margin: 0px;   
+    text-align: center;   
+`;
+
+const ThirdColumn = styled.div`
+    Flex: .25;
+    text-align: center; 
 `;
 
 const Contact = styled.div`
     display: flex;
     flex-direction: column;
-`;
-
-const SecondColumn = styled.div`
-    flex: 1;
-    text-align: center; 
-   
-
-`;
-
-const ThirdColumn = styled.div`
-    Flex: 1;
-    text-align: center; 
-`;
-
-const CopyRightInfo = styled.div`
-    margin-right: 87.5px;
-    margin-top: -73.5px
-`;
-
-const FourthColumn = styled.div`
-    Flex: 1;
-    text-align: center; 
-    height: 50%;
 `;
 
 const FormContainer = styled.div`
@@ -91,76 +100,33 @@ const Input = styled.input`
     padding: 2px;
 `;
 
-const RowOne = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width:100%
-`;
-
-
 const SocialMediaLinks = styled.div`
-    width: 320px;
-    margin: 15px 20px 10px 115px;
-    
-    // display: block;
+    margin: 0
     cursor: pointer;   
+    position: relative;
+    top: 5px;
 `;
 
 const SocialMediaImage = styled.img`
-    height: ${SOCIAL_MEDIA_ICON_SIZE};
-    width: ${SOCIAL_MEDIA_ICON_SIZE};
-    margin-left: 0;
-    margin: 0 10px;
-`;
-
-const RowTwo = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    
-`;
-
-
-const LinkList = styled.ul`
-    display: flex;
-    flex-direction: column;
-    text-align: center;  
-    width: 100%;  
-    padding: 0px;
+    height: 30px;
+    width: 30px;
     margin: 0px;
-    transform: scale(1);
-
-    
+    margin: 3px;
 `;
-
-
 
 function Footer() {
 
     return (        
-            <FooterContainer>
-                <RowOne>
+            <FooterContainerFlex>
+                {/* <RowOne> */}
                     <FirstColumn>                       
-                            <Link href="/">
-                                <LogoImage id="SkoloLogo" src="CroppedSkoloLogo2.png" alt="Skolo" />
-                            </Link>                       
-                        <SocialMediaLinks>
-                            <Link href="https://www.facebook.com/SkoloMusic">
-                                <SocialMediaImage src="FaceBookSquareResize.png" alt="Facebook" />
-                            </Link>
-                            <Link href="https://www.instagram.com/skolomusicsd/">
-                                <SocialMediaImage src="InstaGramSquareResize.png" alt="Instagram" />
-                            </Link>
-                            <Link className="example" href="https://soundcloud.com/skolomusic">
-                                <SocialMediaImage src="SoundCloudCircleResize.png" alt="Sound Cloud" />
-                            </Link>
-                        </SocialMediaLinks>
+                        <Link href="/">
+                            <LogoImage id="SkoloLogo" src="CroppedSkoloLogo2.png" alt="Skolo" />
+                        </Link>                                              
+                        <CopyRightInfo>&copy; 2022 Skolo. All Rights Reserved.</CopyRightInfo> 
                     </FirstColumn>
                     <SecondColumn>
-                        <Explore>
-                            <h2 style={{ margin: '8px' }}>Explore</h2>
-                        </Explore>                           
+                        <ExploreH2>Explore</ExploreH2>
                         <LinkList>
                             <Link href="/" className={styles.exploreLinks}>Home</Link>
                             <Link href="/about" className={styles.exploreLinks}>About</Link>
@@ -169,17 +135,9 @@ function Footer() {
                             <Link href="/connect" className={styles.exploreLinks}>Contact</Link>
                         </LinkList>                       
                     </SecondColumn>
-
                     <ThirdColumn>
-                        <Contact>
-                            <h2 style={{ margin: '8px' }}>Contact</h2>
-                            <a id="email-link" href='brianmillarsd@gmail.com'>brianmillarsd@gmail.com</a>
-                        </Contact>
-                    </ThirdColumn>
-
-                    <FourthColumn>                      
-                            <h2 style={{ margin: '8px' }}>Stay Updated</h2>
-                            <FormContainer id="form-container" action="/api/form" method="post">
+                    <h2 style={{ margin: '8px' }}>Stay Updated</h2>
+                        <FormContainer id="form-container" action="/api/form" method="post">
                                 <label htmlFor="third">
                                     <Input
                                         type="text"
@@ -192,16 +150,25 @@ function Footer() {
                                 type="submit">
                                 Sign Up
                             </SignUpButton>
-                    </FormContainer>
-                       
-                    </FourthColumn>
-                </RowOne>
-
-                <RowTwo>                   
-                        <CopyRightInfo>&copy; 2022 Skolo. All Rights Reserved.</CopyRightInfo>                   
-                </RowTwo>
-            </FooterContainer>
-        
+                        </FormContainer>
+                        <SocialMediaLinks>
+                            <Link href="https://www.facebook.com/SkoloMusic">
+                                <SocialMediaImage src="FaceBookSquareResize.png" alt="Facebook" />
+                            </Link>
+                            <Link href="https://www.instagram.com/skolomusicsd/">
+                                <SocialMediaImage src="InstaGramSquareResize.png" alt="Instagram" />
+                            </Link>
+                            <Link className="example" href="https://soundcloud.com/skolomusic">
+                                <SocialMediaImage src="SoundCloudCircleResize.png" alt="Sound Cloud" />
+                            </Link>
+                        </SocialMediaLinks>
+                        {/* <Contact>
+                            <h2 style={{ margin: '8px' }}>Contact</h2>
+                            <a id="email-link" href='brianmillarsd@gmail.com'>brianmillarsd@gmail.com</a>
+                        </Contact>                        */}
+                    </ThirdColumn>
+                {/* </RowOne> */}
+            </FooterContainerFlex>        
     )
 }
 

@@ -62,7 +62,7 @@ function About() {
     
     return (
       
-            <HeaderContainerFlex width={[1, 1, 0.5, 1]} fontSize={[ 2, 3, 4, 5 ]}>
+            <HeaderContainerFlex width={[1, 1, 0.5, 1]} fontSize={[ 2, 3, 3, 4 ]} >
                 <AboutTitle>About:</AboutTitle>
                 <InfoContainerBox id="skolo-bio">Skolo is a House/ Tech House / Progressive House/ Melodic techno/ Indie Dance producer and DJ from San Diego, CA with current releases on
                 </InfoContainerBox>
