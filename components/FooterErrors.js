@@ -128,6 +128,8 @@ const FooterContainerFlex2 = styled(Flex)`
 function Footer() {
 
     return (
+        <>
+        <MediaQuery minWidth={700}>
             <FooterContainerFlex>
                 <FirstColumn>
                     <Link href="/">
@@ -180,6 +182,19 @@ function Footer() {
                     </SocialMediaLinks>
                 </ThirdColumn>
             </FooterContainerFlex>
+            <MediaQuery maxWidth={500}>
+                <FooterContainerFlex2>
+                    <FirstColumn>
+                        <Link href="/">
+                            <LogoImage id="SkoloLogo" src="CroppedSkoloLogo2.png" alt="Skolo" />
+                        </Link>
+                        <CopyRightInfo>Copyright &copy; 2022. Skolo. All Rights Reserved.</CopyRightInfo>
+
+                    </FirstColumn>
+                </FooterContainerFlex2>
+            </MediaQuery>
+        </MediaQuery>
+        </>
     )
 }
 

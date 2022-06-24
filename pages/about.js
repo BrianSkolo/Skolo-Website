@@ -11,15 +11,20 @@ const HeaderContainerFlex = styled(Flex)`
     // font-size: x-large;
     color: white;
     text-align: center;
-    position: relative;
-    top: 5px;
+    // position: relative;
+    // top: 5px;
 `;
 
 const AboutTitle = styled.h1`
-    position: relative;
-    top: 15px;
+    // position: relative;
+    // top: 15px;
+    display: flex;
+    flex-direction: column;
     font-family: BebasNeue;  
     width: 100% 
+    text-align: center;
+    justify-content: center;
+
    
 `;
 
@@ -60,9 +65,8 @@ const LinkText = styled.span`
 
 function About() {
     
-    return (
-      
-            <HeaderContainerFlex width={[1, 1, 0.5, 1]} fontSize={[ 2, 3, 3, 4 ]} >
+    return (      
+            <HeaderContainerFlex fontSize={[ 2, 3, 3, 4 ]} >
                 <AboutTitle>About:</AboutTitle>
                 <InfoContainerBox id="skolo-bio">Skolo is a House/ Tech House / Progressive House/ Melodic techno/ Indie Dance producer and DJ from San Diego, CA with current releases on
                 </InfoContainerBox>
@@ -82,8 +86,7 @@ function About() {
                         <LinkText color="red" > Late Night Munchies </LinkText>
                     </LabelLinks>
                     </LinksContainerBox>             
-            </HeaderContainerFlex>
-       
+            </HeaderContainerFlex>       
     )
 }
 

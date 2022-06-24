@@ -5,95 +5,51 @@ import { Flex, Box, Heading, Button } from 'rebass';
 
 
 const HeaderContainerFlex = styled(Flex)`
-    flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: wrap;     
     color: white;
-    position: relative;
-    top: 200px;
-`;
+ `;
 
 const InfoContainerBox = styled(Box)`
-    
-    // margin-left: auto;
-    // display: flex;
-    // justify-content: center;
-    // flex-direction: column;
-  
-    // width: 100%
-   
-    // margin-bottom: 50px;
-    // padding-right: 60px;
-    // margin-bottom: 10px;
-    // transform: scale(1.1);
+    // padding-top: 40px;
+    // padding: 5px;
 `;
 
 const UpcomingShows = styled.h1`
-    // display: flex;
-    // justify-content: center;
-    // flex-direction: column;
     font-family: BebasNeue;
-    margin: 0px;
-    
-    // margin-right: 0px
-    // padding: 0px;
-    
+    margin-bottom: 10px;
 `;
 
 const ShowInfo = styled.div`
-// display: flex;
-//     justify-content: center;
-//     flex-direction: column;
-    // margin: 10px;
-    // margin-right: 0px
-    // padding: 0px;
+    // margin-bottom: 8px;
 `;
 
 const ImageContainerBox = styled(Box)`
-
-    // flex-direction: column;
-    // position: relative;
-    // margin-right: auto;
-    // display: flex;
-    // justify-content: center;
-    // flex-direction: column;
-    // padding-left: 75px;
-    // width: 150%;
-
+    max-width: 500px;
 `;
 
 const EventImage = styled.img`
-    width: 500px;
-    // display: block;
+    width: 100%;
+    
+    display: block;
     cursor: pointer;
-    // padding: 20px;
-    // padding-top: 30px;
     margin: 0px;
     -moz-box-shadow: 0 0 5px #fff;
     -webkit-box-shadow: 0 0 5px #fff;
-    box-shadow: 0px 0px 5px #fff;
-    
-    
+    box-shadow: 0px 0px 5px #fff;    
 `;
-
-
-
 
 function Shows() {
 
     return (
-        <HeaderContainerFlex id="shows-container">
-            <InfoContainerBox id="info-container"  width={1/2} px={1}>
-
+        <HeaderContainerFlex py={3}>
+            <InfoContainerBox p={[2, 2, 3]} fontSize={[ 1, 2, 3, 4 ]}>
                 <UpcomingShows id="upcoming-shows">
-
                     Upcoming Shows:
-
                 </UpcomingShows>
-
                 <ShowInfo id="title">
-                    The Unicorns and The Cruz Coalition Presents: In Unicorns We Trust
+                    <b>The Unicorns and The Cruz Coalition Presents: In Unicorns We Trust</b>
                 </ShowInfo>
-
                 <ShowInfo id="address">
                     6250 Hollywood Blvd, Los Angeles CA
                 </ShowInfo>
@@ -101,13 +57,12 @@ function Shows() {
                     July 3, 2022
                 </ShowInfo>
             </InfoContainerBox>
-
-            <ImageContainerBox id="image-container"  width={1/2} px={1}>
-
+            <ImageContainerBox p={[2, 2, 3]}>
                 <Link id="link" href="https://www.facebook.com/events/705625483884426">
                     <EventImage
                         id="image"
-                        src="Unicorns.jpg"
+                        src="Unicorns.jpg"  
+                        // width={[1, 0.25]}              
                     />
                 </Link>
             </ImageContainerBox>

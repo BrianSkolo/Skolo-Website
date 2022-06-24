@@ -27,7 +27,7 @@ function Navbar() {
       <Link href="/about"><NavLink>About</NavLink></Link>
       <Link href="/shows"><NavLink>Shows</NavLink></Link>
       <Link href="/music"><NavLink>Music</NavLink></Link>
-      <Link href="/connect"><NavLink>Contact</NavLink></Link>
+      <Link href="/connect"><NavLink>Community</NavLink></Link>
     </NavContainer>
   
   )

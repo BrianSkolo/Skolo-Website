@@ -11,8 +11,7 @@ const HeaderContainerFlex = styled(Flex)`
       width: 100%; 
       color: white;  
       position: relative;
-      top: 10px
-
+      top: 5px
 `;
 
 const TourAndTixBox = styled(Box)`
@@ -50,18 +49,16 @@ const TixButton = styled.button`
 `;
 const ContactUsContainer = styled(Box)`
     position: relative;
-    top: 75px;
+    top: 60px;
 `;
-
 
 const CommunityNewsContainer = styled.div`
     flex-direction: column;
     align-items: center;
-    width: 100%;     
+    width: 100%; 
 `;
 
-const FormContainer = styled.div`  
-    
+const FormContainer = styled.div`      
     // position: relative
     // top: 20px
     // flex-direction: row;
@@ -89,7 +86,7 @@ const SignUpButton = styled.button`
 
 const SocialMediaLinksBox = styled(Box)` 
     position: relative;
-    top: 100px;    
+    top: 77.5px;    
     cursor: pointer;   
 `;
 
@@ -102,28 +99,19 @@ const SocialMediaImage = styled.img`
 `;
 
 
-
-
-
-
-export default function Form() {
- 
+export default function Form() { 
   return (
-
       <HeaderContainerFlex id="header-container">
         <TourAndTixBox>
           <TourDates id="tour" style={{ marginBottom: '0px' }}>
             Tour
           </TourDates>
-
           <TourDates id="dates" style={{ marginTop: '0px', marginBottom: '15px' }}>
             Dates
-          </TourDates>
-          
+          </TourDates>          
          <TicketLinkBox>
           <Link id="ticket-link" className="shows" href="/shows">
-            <TixButton
-               
+            <TixButton              
                 style={{
                 borderWidth: '1px',
                 borderStyle: 'solid',
@@ -131,34 +119,33 @@ export default function Form() {
                 borderRadius: '4px',
                 transform: 'scale(1.5)'
               }}>
-              Purchase Tickets
-            
-            </TixButton>
-            
+              Purchase Tickets            
+            </TixButton>            
           </Link>
           </TicketLinkBox>
           </TourAndTixBox>
-
         <ContactUsContainer id="contactUs-container">          
-          <CommunityNewsContainer id="communityNews-container">
+          <CommunityNewsContainer id="communityNews-container" >
             <h1
               id="Community News"
               style={{
                 fontFamily: 'BebasNeue',
-                transform: 'scale(2)',
+                fontSize: '65px',
+                marginBottom: '0px',
+                marginTop: '0px',
+                // transform: 'scale(2)',
               }}>
               Community News
             </h1>
-
             <h2
               id="subscribe-text"
               style={{
                 fontSize: '20px',
+                marginTop: '0px',
               }}>
               Subscribe with your email address to keep up with the latest Skolo news, events, and exclusives via email.
             </h2>
           </CommunityNewsContainer >
-
           <FormContainer id="form-container" className={styles.form} action="/api/form" method="post">
             <label htmlFor="third">
               <Input
@@ -172,8 +159,7 @@ export default function Form() {
               Sign Up
             </SignUpButton>
           </FormContainer>
-        </ContactUsContainer>
-        
+        </ContactUsContainer>        
         <SocialMediaLinksBox>
           <Link href="https://www.facebook.com/SkoloMusic">
               <SocialMediaImage src="FaceBookSquareResize.png" alt="Facebook" />
@@ -185,7 +171,6 @@ export default function Form() {
               <SocialMediaImage src="SoundCloudCircleResize.png" alt="Sound Cloud" />
           </Link>
       </SocialMediaLinksBox>
-
       </HeaderContainerFlex>
 
   )

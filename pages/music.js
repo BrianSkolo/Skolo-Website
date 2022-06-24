@@ -54,11 +54,9 @@ function BeatportLink() {
                         id="beatport-image"
                         src="BeatportNoBG4.png"
                         alt="Beatport"
-                        style={{position: 'relative', top: '15px', paddingTop: '0px'}}
-                        
+                        style={{position: 'relative', top: '15px', paddingTop: '0px'}}                        
                     />
                 </ListenLinksBoxes>
-
                 <ListenLinksBoxes target="blank" href="https://www.traxsource.com/artist/612812/skolo">
                     <MusicImage
                         id="traxsource-image"
@@ -70,7 +68,6 @@ function BeatportLink() {
 
                     />
                 </ListenLinksBoxes>
-
                 <ListenLinksBoxes target="blank" href="https://music.apple.com/us/artist/skolo/1482772924">
                     <MusicImage
                         id="appleMusic-image"
@@ -78,7 +75,6 @@ function BeatportLink() {
                         alt="Apple Music"
                     />
                 </ListenLinksBoxes>
-
                 <ListenLinksBoxes target="blank" href="https://open.spotify.com/artist/3E2JNTaM9NCiwA2TjvyxHw">
                     <MusicImage
                         id="spotify-image"
