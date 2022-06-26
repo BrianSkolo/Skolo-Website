@@ -10,8 +10,8 @@ const HeaderContainerFlex = styled(Flex)`
       text-align: center;
       width: 100%; 
       color: white;  
-      position: relative;
-      top: 5px
+      padding-top: 40px;
+     
 `;
 
 const TourAndTixBox = styled(Box)`
@@ -25,6 +25,7 @@ const TourDates = styled.h1`
     width: 100%; 
     font-family: BebasNeue;
     font-size: 70px;
+    margin-top: 0px;
 `;
 
 const TicketLinkBox = styled(Box)`   

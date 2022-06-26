@@ -7,12 +7,10 @@ import { Box, Heading } from 'rebass/styled-components';
 const HeaderContainerFlex = styled(Flex)`
     flex-direction: column;
     justify-content: center;
-    // width: 1;  
-    // font-size: x-large;
     color: white;
     text-align: center;
-    // position: relative;
-    // top: 5px;
+    padding-top: 40px
+    margin-top: 0px;
 `;
 
 const AboutTitle = styled.h1`
@@ -24,8 +22,8 @@ const AboutTitle = styled.h1`
     width: 100% 
     text-align: center;
     justify-content: center;
-
-   
+    font-size: 50px;
+    margin-bottom: 0px;   
 `;
 
 const InfoContainerBox = styled(Box)`
@@ -33,16 +31,14 @@ const InfoContainerBox = styled(Box)`
     flex-direction: column;
     width: 100%
     margin: 10px;
-    margin-top: 10px;  
-   
-    
+    margin-top: 0px;      
 `;
 const LinksContainerBox = styled(Box)`
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin-top: 5px;    
+    margin-top: 0px;    
 `;
 
 const LabelLinks = styled.a`

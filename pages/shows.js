@@ -17,7 +17,8 @@ const InfoContainerBox = styled(Box)`
 
 const UpcomingShows = styled.h1`
     font-family: BebasNeue;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    font-size: 50px;
 `;
 
 const ShowInfo = styled.div`
@@ -29,8 +30,7 @@ const ImageContainerBox = styled(Box)`
 `;
 
 const EventImage = styled.img`
-    width: 100%;
-    
+    width: 100%;   
     display: block;
     cursor: pointer;
     margin: 0px;

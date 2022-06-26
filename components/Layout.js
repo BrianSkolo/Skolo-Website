@@ -18,7 +18,7 @@ const MainContainer = styled(Flex)`
     max-width: 1920px;
     min-height: 100vh;
     flex-direction: column;
-    background-color: rgb(0, 0, 0, 0.7);
+    background-color: rgb(0, 0, 0, 0.6);
     margin: 0 auto;
 `;
 

@@ -23,17 +23,17 @@ const MasterFlexContainer = styled(Flex)`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 125px;
 `;
 
-const NewReleases = styled.div`
-  display: flex;
-  justify-content: center;
+const NewReleases = styled.h1`
+  margin-left: 325px;
+  margin-right: 325px;
   color: white; 
   font-family: BebasNeue; 
-  font-size: 50px;
-  // border-bottom: solid  
+  width: 100%;
+  margin: 0;
 `;
 
 const SkoloFace = styled.img`
@@ -44,7 +44,9 @@ const SkoloFace = styled.img`
 const HomeFlex = styled(Flex)`
   flex-wrap: wrap;
   justify-content: center; 
-  padding-top: 20px; 
+  // flex-direction: column;  
+  
+  
 `;
 
 const NewsBoxOne = styled(Box)` 
@@ -96,11 +98,16 @@ const Shows = styled(Flex)`
 `;
 
 const ImageContainerBox = styled(Box)`
-width: 100%
+// display: flex;
+// flex-direction: row;
+    max-width: 500px;
+
+
+
 `;
 
 const EventImage = styled.img`
-
+display: flex;
 width: 100%;   
 display: block;
 cursor: pointer;
@@ -111,28 +118,24 @@ box-shadow: 0px 0px 5px #fff;
      
 `;
 
-// const ShowInfo = styled.h1`
-
+const ShowInfo = styled.h1`
+// width: 100%;
     
-// display: block;
-// cursor: pointer;
-// margin: 0px;
-// -moz-box-shadow: 0 0 5px #fff;
-// -webkit-box-shadow: 0 0 5px #fff;
-// box-shadow: 0px 0px 5px #fff;   
-// `;
+display: block;
+cursor: pointer;
+margin: 0px;
+-moz-box-shadow: 0 0 5px #fff;
+-webkit-box-shadow: 0 0 5px #fff;
+box-shadow: 0px 0px 5px #fff;   
+`;
 
 function Home() {
 
   return (
     <MasterFlexContainer >
-      <div>
-        <NewReleases >New Releases:</NewReleases>
-        </div>
-    
       <HomeFlex>
         {/* <SkoloFace src='SkoloFaceNoLogo.jpg'></SkoloFace> */}
-        
+        <NewReleases >New Releases:</NewReleases>
         <div width={1 / 2} px={2}>
           <NewsBoxOne>
             <Link href="https://www.beatport.com/release/once-again/3663819">
@@ -172,9 +175,17 @@ function Home() {
             </Link>
           </NewsBoxOne>
         </div>
-        
+
+        <ImageContainerBox >
+          {/* <ShowInfo >July 3, 2022</ShowInfo> */}
+          <Link id="link" href="https://www.facebook.com/events/705625483884426">
+            <EventImage
+              id="image"
+              src="Unicorns.jpg"            
+            />
+          </Link>
+        </ImageContainerBox>
       </HomeFlex>
-      
     </MasterFlexContainer>
   )
 }

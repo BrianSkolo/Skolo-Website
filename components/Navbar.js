@@ -7,6 +7,7 @@ const NavContainer = styled.nav`
     justify-content: space-around;
     padding-left: 15px;
     padding-right: 20px;
+  
 `;
 
 const NavLink = styled.a`

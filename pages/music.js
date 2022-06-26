@@ -7,12 +7,13 @@ const HeaderContainerFlex = styled(Flex)`
     align-items: center;
     // width: 100%; 
     color: white; 
-    position: relative;
-    top: 50px;   
+    // position: relative;
+    // top: 50px;   
+    padding-top: 40px
 `;
 
 const Listen = styled.h1`
-    font-size: 40px;
+    font-size: 50px;
     font-family: BebasNeue; 
     margin: 0%;
 `;

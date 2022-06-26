@@ -1,5 +1,7 @@
 import Link from "next/link";
 import styled from 'styled-components';
+import { Flex, Box, Image, Heading, Button } from 'rebass';
+
 
 const HeaderContainer = styled.div`
     display: flex;
@@ -7,6 +9,8 @@ const HeaderContainer = styled.div`
     justify-content: center;
     padding-top: 35px;
     padding-bottom: 40px;
+    // background-color: rgb(0, 0, 0, 0.3);
+    background-image: linear-gradient(black, transparent);
 `;
 
 const LogoImage = styled.img`
@@ -14,6 +18,14 @@ const LogoImage = styled.img`
     display: block;
     cursor: pointer;
     
+`;
+
+const MainContainer = styled(Flex)`
+    max-width: 1920px;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.7);
+    margin: 0 auto;
 `;
 
 function Header() {

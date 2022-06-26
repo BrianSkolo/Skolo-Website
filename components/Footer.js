@@ -14,12 +14,21 @@ import MediaQuery from 'react-responsive'
 //     margin: 0 auto;
 // `;
 
+const GradientDiv = styled.div`
+    background-image: linear-gradient(transparent, black);  
+    
+`;
+
 const FooterContainerFlex = styled(Flex)` 
     // padding: 0%;
-    background-color: transparent;
+    // background-color: transparent;
     color: white;  
     justify-content: center;  
-    background-color: rgb(0, 0, 0, 0.1.5);
+    // background-color: rgb(0, 0, 0, 0.08);
+   
+    // border-top: solid; 
+    // margin-left: 380px;
+    // margin-right: 380px;  
  
       
 `;
@@ -128,6 +137,7 @@ const FooterContainerFlex2 = styled(Flex)`
 function Footer() {
 
     return (
+        <GradientDiv>
             <FooterContainerFlex>
                 <FirstColumn>
                     <Link href="/">
@@ -180,6 +190,7 @@ function Footer() {
                     </SocialMediaLinks>
                 </ThirdColumn>
             </FooterContainerFlex>
+        </GradientDiv>
     )
 }
 
