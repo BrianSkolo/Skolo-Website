@@ -2,16 +2,15 @@ import { Flex, Box } from 'rebass';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Header from "./Header";
+import FooterMobile from './FooterMobile';
 import styled from "styled-components";
 
 const BGImageContainer = styled(Box)`
     background-image: url('/SkoloStairs1920x1080.png');   
-    max-width: 1920px;
-    
+    max-width: 1920px;    
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
-
 `;
 
 const MainContainer = styled(Flex)`
@@ -26,15 +25,16 @@ const ContentBox = styled(Box)`
     width: 100%;    
 `;
 
-export default function Layout({ children }) {   
+export default function Layout({ children }) {
     return (
         <BGImageContainer >
-        <MainContainer>  
-            <Header /> 
-            <Navbar />  
-            <ContentBox flex={1}>{children}</ContentBox>   
-            <Footer  />
-        </MainContainer>
+            <MainContainer>
+                <Header />
+                <Navbar />
+                <ContentBox flex={1}>{children}</ContentBox>
+                <Footer />
+                {/* <FooterMobile/> */}
+            </MainContainer>
         </BGImageContainer>
     );
 }

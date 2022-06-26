@@ -1,23 +1,7 @@
-import styles from '../styles/Home.module.css';
+// import styles from '../styles/Home.module.css';
 import Link from "next/link";
 import styled from 'styled-components';
 import { Flex, Box, Heading, Button } from 'rebass';
-
-const PageContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  
-`;
-
-// const GUTTER_SIZE = '20%';
-// const GutterContainer = styled.div`
-//   width: 100%;
-//   padding: 0 ${GUTTER_SIZE};
-//   display: flex;
-//   flex-direction: column;
-
-// `;
 
 const MasterFlexContainer = styled(Flex)`
   width: 100%;
@@ -27,24 +11,37 @@ const MasterFlexContainer = styled(Flex)`
   padding-bottom: 125px;
 `;
 
-const NewReleases = styled.div`
+const NewReleases = styled(Box)`
   display: flex;
   justify-content: center;
   color: white; 
   font-family: BebasNeue; 
   font-size: 50px;
-  // border-bottom: solid  
+  font-weight: bold;
 `;
 
-const SkoloFace = styled.img`
-  width: 50px;
-  height: 50px;
+const ReleaseMessage = styled(Box)`
+display: flex;
+justify-content: center;
+color: white; 
+font-size: 18.25px;
+padding-top 2px;
+padding-bottom 2px;
+`;
+
+const MarqueeWrapper = styled.div`
+  color: white;
+  font-size: 20px
+  // width: 900px;
+  // marquee width="500px" 
 `;
 
 const HomeFlex = styled(Flex)`
   flex-wrap: wrap;
   justify-content: center; 
-  padding-top: 20px; 
+  padding-top: 5px; 
+  // border-top: solid;
+  // border-color: white;
 `;
 
 const NewsBoxOne = styled(Box)` 
@@ -52,28 +49,6 @@ const NewsBoxOne = styled(Box)`
   width: 300px;
   margin: 20px 25px 40px 20px;
   justify-content: space-evenly; 
- 
-`;
-
-// const NewsTextBox = styled(Box)`
-//   flex-direction: column;
-//   // width: 300px;
-//   display: block;
-//   font-size: 13px;
-//   text-align: right;
-//   // padding: 0px 5px 5px 5px;
-// `;
-
-const Header = styled.h1`
-  display: flex;
-  font-size: 17px;
-  width: 300px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: right; 
-`;
-
-const ListenLinksBoxes = styled(Box)`
 
 `;
 
@@ -90,9 +65,7 @@ const MusicImage = styled.img`
 const Shows = styled(Flex)`
     justify-content: space-evenly;
     flex-wrap: wrap;     
-    color: white;
-  
-  
+    color: white; 
 `;
 
 const ImageContainerBox = styled(Box)`
@@ -111,29 +84,38 @@ box-shadow: 0px 0px 5px #fff;
      
 `;
 
-// const ShowInfo = styled.h1`
+const ColoredLine = ({ color }) => (
+  <hr
+    style={{
+      color: color,
+      backgroundColor: color,
+      height: 2,
+      width: '650px',
+      marginTop: 0,
+      marginBottom: 0,
+      // opacity: '1%'
 
-    
-// display: block;
-// cursor: pointer;
-// margin: 0px;
-// -moz-box-shadow: 0 0 5px #fff;
-// -webkit-box-shadow: 0 0 5px #fff;
-// box-shadow: 0px 0px 5px #fff;   
-// `;
+    }}
+  />
+);
 
 function Home() {
 
   return (
-    <MasterFlexContainer >
-      <div>
-        <NewReleases >New Releases:</NewReleases>
-        </div>
-    
+    <MasterFlexContainer p={[3, 4, 4]} >
+      <NewReleases  >Current Releases:</NewReleases>
+      {/* <ColoredLine color="white"  />   */}
+      <ReleaseMessage fontSize={[1, 2, 2, 3]}>
+        CLICK ON THE ALBUM ART BELOW TO CHECK OUT THE CURRENT RELEASES:
+      </ReleaseMessage>
+      {/* <MarqueeWrapper>
+        <marquee direction="right" >
+          <span class="marquee">CLICK ON THE ALBUM ART BELOW TO CHECK OUT THE CURRENT RELEASES</span>
+        </marquee>
+        </MarqueeWrapper> */}
+      {/* <ColoredLine color="white" style={{ marginTop: 0 }} />     */}
       <HomeFlex>
-        {/* <SkoloFace src='SkoloFaceNoLogo.jpg'></SkoloFace> */}
-        
-        <div width={1 / 2} px={2}>
+        <div width={1 / 2} px={2} >
           <NewsBoxOne>
             <Link href="https://www.beatport.com/release/once-again/3663819">
               <MusicImage
@@ -155,6 +137,13 @@ function Home() {
               </MusicImage>
             </Link>
           </NewsBoxOne>
+          <NewsBoxOne>
+            <Link href="https://www.beatport.com/release/underground-tech-house-vol-07/3613813">
+              <MusicImage
+                src='UnderGroundTechHouseComp.jpg'>
+              </MusicImage>
+            </Link>
+          </NewsBoxOne>
         </div>
         <div width={1 / 2} px={2}>
           <NewsBoxOne>
@@ -171,12 +160,17 @@ function Home() {
               </MusicImage>
             </Link>
           </NewsBoxOne>
+          <NewsBoxOne>
+            <Link href="https://www.beatport.com/release/best-of-2021/3601627">
+              <MusicImage
+                src='WildCardComp.jpg'>
+              </MusicImage>
+            </Link>
+          </NewsBoxOne>
         </div>
-        
       </HomeFlex>
-      
     </MasterFlexContainer>
   )
 }
 
-export default Home
+export default Home 

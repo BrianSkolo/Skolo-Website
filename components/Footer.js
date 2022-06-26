@@ -4,42 +4,21 @@ import Link from "next/link";
 import { Flex, Box, Image, Heading, Button } from 'rebass';
 import MediaQuery from 'react-responsive'
 
-
-
-// const MainContainer = styled(Flex)`
-//     max-width: 1920px;
-//     min-height: 100vh;
-//     flex-direction: column;
-//     background-color: rgb(0, 0, 0, 0.7);
-//     margin: 0 auto;
-// `;
-
 const GradientDiv = styled.div`
-    background-image: linear-gradient(transparent, black);  
-    
+    background-image: linear-gradient(transparent, black);    
 `;
 
 const FooterContainerFlex = styled(Flex)` 
-    // padding: 0%;
-    // background-color: transparent;
     color: white;  
     justify-content: center;  
-    // background-color: rgb(0, 0, 0, 0.08);
-   
-    // border-top: solid; 
-    // margin-left: 380px;
-    // margin-right: 380px;  
- 
-      
+    flex-wrap: wrap;         
 `;
 
 const FirstColumn = styled(Box)`  
     display: flex;
-    // text-align: center; 
     margin-right: 14px; 
     flex-direction: column;
     justify-content: center;
-    // padding-top: 10.5px;
 `;
 
 const LogoImage = styled(Image)`
@@ -135,16 +114,20 @@ const FooterContainerFlex2 = styled(Flex)`
 `;
 
 function Footer() {
-
     return (
         <GradientDiv>
-            <FooterContainerFlex>
+            <FooterContainerFlex sx={{
+                opacity: 0,
+                ':hover': {
+                    opacity: '1',
+                    transition: '0.8s',
+                }
+            }}>
                 <FirstColumn>
                     <Link href="/">
                         <LogoImage id="SkoloLogo" src="CroppedSkoloLogo2.png" alt="Skolo" />
                     </Link>
                     <CopyRightInfo>Copyright &copy; 2022. Skolo. All Rights Reserved.</CopyRightInfo>
-
                 </FirstColumn>
                 <SecondColumn>
                     <LinkList>
@@ -154,7 +137,6 @@ function Footer() {
                         <Link href="/music">Music</Link>
                         <Link href="/connect">Contact</Link>
                     </LinkList>
-
                     {/* <Contact>
                             <h2 style={{ fontSize: '15px' }}>Contact:</h2>
                             <a id="email-link" href='mailto:brianmillarsd@gmail.com' style={{ fontSize: '15px' }}>brianmillarsd@gmail.com</a>

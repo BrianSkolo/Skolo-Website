@@ -19,10 +19,12 @@ const UpcomingShows = styled.h1`
     font-family: BebasNeue;
     margin-bottom: 0px;
     font-size: 50px;
+   
 `;
 
 const ShowInfo = styled.div`
     // margin-bottom: 8px;
+    padding-top: 3px;
 `;
 
 const ImageContainerBox = styled(Box)`
@@ -39,14 +41,27 @@ const EventImage = styled.img`
     box-shadow: 0px 0px 5px #fff;    
 `;
 
+const ColoredLine = ({ color }) => (
+    <hr
+        style={{
+            color: color,
+            backgroundColor: color,
+            height: 2,
+            width: '750px',
+            marginTop: 0,
+            marginBottom: 0,
+        }}
+    />
+);
 function Shows() {
 
     return (
         <HeaderContainerFlex py={3}>
-            <InfoContainerBox p={[2, 2, 3]} fontSize={[ 1, 2, 3, 4 ]}>
+            <InfoContainerBox p={[2, 2, 3]} fontSize={[1, 2, 3, 4]}>
                 <UpcomingShows id="upcoming-shows">
                     Upcoming Shows:
                 </UpcomingShows>
+                {/* <ColoredLine color="white" sx={{}} />     */}
                 <ShowInfo id="title">
                     <b>The Unicorns and The Cruz Coalition Presents: In Unicorns We Trust</b>
                 </ShowInfo>
@@ -61,8 +76,8 @@ function Shows() {
                 <Link id="link" href="https://www.facebook.com/events/705625483884426">
                     <EventImage
                         id="image"
-                        src="Unicorns.jpg"  
-                        // width={[1, 0.25]}              
+                        src="Unicorns.jpg"
+                    // width={[1, 0.25]}              
                     />
                 </Link>
             </ImageContainerBox>

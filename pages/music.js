@@ -5,33 +5,23 @@ import styles from '../styles/Home.module.css';
 const HeaderContainerFlex = styled(Flex)`
     flex-direction: column;
     align-items: center;
-    // width: 100%; 
     color: white; 
-    // position: relative;
-    // top: 50px;   
-    padding-top: 40px
+    padding-top: 30px
 `;
 
 const Listen = styled.h1`
     font-size: 50px;
     font-family: BebasNeue; 
     margin: 0%;
+    font-weight: bold;
 `;
 
 const LinksContainerBox = styled(Box)`
-    position: relative;
-    top: -20px;   
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;  
-    // margin-top: -25px;    
+    position: relative;      
 `;
 
-const ListenLinksBoxes = styled(Box)`
-    // height: 50px;
-    // width: 50px;
-    padding: 20px;
-    margin: 0px;
+const ListenLinksBoxes = styled(Box)`   
+    padding: 10px 2px 10px 2px;
     zoom: 90%;
 `;
 
@@ -44,18 +34,31 @@ const MusicImage = styled.img`
     padding-top: 0px;
 `;
 
+const ColoredLine = ({ color }) => (
+    <hr
+        style={{
+            color: color,
+            backgroundColor: color,
+            height: 2.5,
+            width: '320px',
+            marginTop: 0,
+            marginBottom: 0,
+        }}
+    />
+);
+
 function BeatportLink() {
-  
+
     return (
         <HeaderContainerFlex id="header-container" width={[1, 1, 0.5, 1]}>
-            <Listen id="listen">Listen:</Listen>
+            <Listen id="listen" style={{ paddingBottom: '15px' }}>Listen:</Listen>
+            {/* <ColoredLine color="white" />     */}
             <LinksContainerBox id='links-container'>
                 <ListenLinksBoxes target="blank" href="https://www.beatport.com/artist/skolo/978581">
                     <MusicImage
                         id="beatport-image"
                         src="BeatportNoBG4.png"
                         alt="Beatport"
-                        style={{position: 'relative', top: '15px', paddingTop: '0px'}}                        
                     />
                 </ListenLinksBoxes>
                 <ListenLinksBoxes target="blank" href="https://www.traxsource.com/artist/612812/skolo">
@@ -64,9 +67,6 @@ function BeatportLink() {
                         src="TraxsourceNoBGCroppedSmaller.png"
                         alt="Traxsource"
                         className={styles.ListenLinksMargin}
-                        style={{position: 'relative', top: '5px'}}
-                        
-
                     />
                 </ListenLinksBoxes>
                 <ListenLinksBoxes target="blank" href="https://music.apple.com/us/artist/skolo/1482772924">
@@ -80,8 +80,9 @@ function BeatportLink() {
                     <MusicImage
                         id="spotify-image"
                         src="SpotifyNoBG2.png"
-                        alt="Spotify" 
-                        />
+                        alt="Spotify"
+
+                    />
                 </ListenLinksBoxes>
             </LinksContainerBox>
         </HeaderContainerFlex>
