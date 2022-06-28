@@ -21,6 +21,7 @@ const AboutTitle = styled.h1`
     text-align: center;
     justify-content: center;
     font-size: 50px;
+    margin-top: 10px;
     margin-bottom: 0px;   
     font-weight: bold;
 `;

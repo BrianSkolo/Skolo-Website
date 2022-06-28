@@ -2,7 +2,6 @@ import styles from '../styles/Home.module.css';
 import styled from 'styled-components';
 import Link from "next/link";
 import { Flex, Box, Image, Heading, Button } from 'rebass';
-import MediaQuery from 'react-responsive'
 
 const GradientDiv = styled.div`
     background-image: linear-gradient(transparent, black);    

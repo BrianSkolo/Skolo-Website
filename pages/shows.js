@@ -8,16 +8,16 @@ const HeaderContainerFlex = styled(Flex)`
     justify-content: space-evenly;
     flex-wrap: wrap;     
     color: white;
+    margin: 0;
  `;
 
 const InfoContainerBox = styled(Box)`
-    // padding-top: 40px;
-    // padding: 5px;
 `;
 
 const UpcomingShows = styled.h1`
     font-family: BebasNeue;
-    margin-bottom: 0px;
+    padding-top: 30px;
+    margin: 0px;
     font-size: 50px;
    
 `;

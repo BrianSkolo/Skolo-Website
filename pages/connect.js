@@ -10,7 +10,7 @@ const HeaderContainerFlex = styled(Flex)`
       text-align: center;
       width: 100%; 
       color: white;  
-      padding-top: 40px;    
+      padding-top: 17.5px;    
 `;
 
 const TourAndTixBox = styled(Box)`

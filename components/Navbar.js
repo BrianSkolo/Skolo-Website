@@ -6,6 +6,7 @@ const NavContainer = styled.nav`
     justify-content: space-around;
     padding-left: 15px;
     padding-right: 20px;
+    padding-top: 0px;
 `;
 
 const NavLink = styled.a`
@@ -22,7 +23,7 @@ function Navbar() {
       <Link href="/"><NavLink>Home</NavLink></Link>
       <Link href="/about"><NavLink>About</NavLink></Link>
       <Link href="/shows"><NavLink>Shows</NavLink></Link>
-      <Link href="/music"><NavLink>Music</NavLink></Link>
+      <Link href="/music"><NavLink>Listen</NavLink></Link>
       <Link href="/connect"><NavLink>Community</NavLink></Link>
     </NavContainer>
   )

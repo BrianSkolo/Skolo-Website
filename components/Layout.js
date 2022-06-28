@@ -4,6 +4,8 @@ import Footer from "./Footer";
 import Header from "./Header";
 import FooterMobile from './FooterMobile';
 import styled from "styled-components";
+import { useMediaQuery } from 'react-responsive'
+
 
 const BGImageContainer = styled(Box)`
     background-image: url('/SkoloStairs1920x1080.png');   
@@ -11,6 +13,7 @@ const BGImageContainer = styled(Box)`
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
+    // position: absolute;
 `;
 
 const MainContainer = styled(Flex)`
@@ -25,6 +28,20 @@ const ContentBox = styled(Box)`
     width: 100%;    
 `;
 
+const Desktop = ({ children }) => {
+    const isDesktop = useMediaQuery({ minWidth: 992 })
+    return isDesktop ? children : null
+  }
+
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 767 })
+    return isMobile ? children : null
+  }
+//   const Default = ({ children }) => {
+//     const isNotMobile = useMediaQuery({ minWidth: 768 })
+//     return isNotMobile ? children : null
+//   }
+
 export default function Layout({ children }) {
     return (
         <BGImageContainer >
@@ -32,8 +49,12 @@ export default function Layout({ children }) {
                 <Header />
                 <Navbar />
                 <ContentBox flex={1}>{children}</ContentBox>
-                <Footer />
-                {/* <FooterMobile/> */}
+                <Desktop>
+                    <Footer/>
+                </Desktop>
+                {/* <Mobile>
+                    <FooterMobile/>
+                </Mobile> */}
             </MainContainer>
         </BGImageContainer>
     );

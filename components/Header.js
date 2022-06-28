@@ -2,13 +2,12 @@ import Link from "next/link";
 import styled from 'styled-components';
 import { Flex, Box, Image, Heading, Button } from 'rebass';
 
-
 const HeaderContainer = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
-    padding-top: 35px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 25px;
     // background-color: rgb(0, 0, 0, 0.3);
     background-image: linear-gradient(black, transparent);
 `;
@@ -16,8 +15,7 @@ const HeaderContainer = styled.div`
 const LogoImage = styled.img`
     width: 320px;
     display: block;
-    cursor: pointer;
-    
+    cursor: pointer;   
 `;
 
 const MainContainer = styled(Flex)`

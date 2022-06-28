@@ -7,7 +7,7 @@ const MasterFlexContainer = styled(Flex)`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 25px;
   padding-bottom: 125px;
 `;
 
@@ -27,6 +27,7 @@ color: white;
 font-size: 18.25px;
 padding-top 2px;
 padding-bottom 2px;
+text-align: center;
 `;
 
 const MarqueeWrapper = styled.div`
