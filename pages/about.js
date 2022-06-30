@@ -9,8 +9,8 @@ const HeaderContainerFlex = styled(Flex)`
     justify-content: center;
     color: white;
     text-align: center;
-    padding-top: 40px
-    margin-top: 0px;
+    // padding-top: 40px
+    // margin-top: 0px;
 `;
 
 const AboutTitle = styled.h1`
@@ -68,7 +68,7 @@ const ColoredLine = ({ color }) => (
 function About() {
 
     return (
-        <HeaderContainerFlex p={[1, 2, 3]} fontSize={[2, 3, 3, 4]} >
+        <HeaderContainerFlex p={[1, 2, 3, '24px']} fontSize={[2, 3, 3, 4]} >
             <AboutTitle>About:</AboutTitle>
             {/* <ColoredLine color="white" />   */}
             <InfoContainerBox id="skolo-bio">Skolo is a House/ Tech House / Progressive House/ Melodic techno/ Indie Dance producer and DJ from San Diego, CA with current releases on

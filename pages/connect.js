@@ -10,7 +10,7 @@ const HeaderContainerFlex = styled(Flex)`
       text-align: center;
       width: 100%; 
       color: white;  
-      padding-top: 17.5px;    
+      // padding-top: 17.5px;    
 `;
 
 const TourAndTixBox = styled(Box)`
@@ -94,7 +94,7 @@ const SocialMediaImage = styled.img`
 
 export default function Form() {
   return (
-    <HeaderContainerFlex id="header-container">
+    <HeaderContainerFlex id="header-container" p={[1, 2, 3, '24px']}>
       <TourAndTixBox>
         <TourDates id="tour" style={{ marginBottom: '0px' }}>
           Tour

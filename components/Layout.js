@@ -2,7 +2,7 @@ import { Flex, Box } from 'rebass';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Header from "./Header";
-import FooterMobile from './FooterMobile';
+
 import styled from "styled-components";
 import { useMediaQuery } from 'react-responsive'
 
@@ -28,15 +28,7 @@ const ContentBox = styled(Box)`
     width: 100%;    
 `;
 
-const Desktop = ({ children }) => {
-    const isDesktop = useMediaQuery({ minWidth: 992 })
-    return isDesktop ? children : null
-  }
 
-  const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 767 })
-    return isMobile ? children : null
-  }
 //   const Default = ({ children }) => {
 //     const isNotMobile = useMediaQuery({ minWidth: 768 })
 //     return isNotMobile ? children : null
@@ -49,12 +41,10 @@ export default function Layout({ children }) {
                 <Header />
                 <Navbar />
                 <ContentBox flex={1}>{children}</ContentBox>
-                <Desktop>
+             
                     <Footer/>
-                </Desktop>
-                {/* <Mobile>
-                    <FooterMobile/>
-                </Mobile> */}
+        
+              
             </MainContainer>
         </BGImageContainer>
     );

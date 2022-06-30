@@ -16,7 +16,7 @@ const InfoContainerBox = styled(Box)`
 
 const UpcomingShows = styled.h1`
     font-family: BebasNeue;
-    padding-top: 30px;
+    // padding-top: 30px;
     margin: 0px;
     font-size: 50px;
    
@@ -56,7 +56,7 @@ const ColoredLine = ({ color }) => (
 function Shows() {
 
     return (
-        <HeaderContainerFlex py={3}>
+        <HeaderContainerFlex p={[1, 2, 3, 4]}>
             <InfoContainerBox p={[2, 2, 3]} fontSize={[1, 2, 3, 4]}>
                 <UpcomingShows id="upcoming-shows">
                     Upcoming Shows:

@@ -54,7 +54,7 @@ const LinkList = styled(Box)`
 const ThirdColumn = styled(Box)`
     display: flex;
     justify-content: center;
-    margin-left: 17.5px;  
+    // margin-right: 50px;  
     flex-direction: column; 
     // padding-top: 17.5px;
 `;
@@ -115,20 +115,14 @@ const FooterContainerFlex2 = styled(Flex)`
 function Footer() {
     return (
         <GradientDiv>
-            <FooterContainerFlex sx={{
-                opacity: 0,
-                ':hover': {
-                    opacity: '1',
-                    transition: '0.8s',
-                }
-            }}>
+            <FooterContainerFlex>
                 <FirstColumn>
                     <Link href="/">
                         <LogoImage id="SkoloLogo" src="CroppedSkoloLogo2.png" alt="Skolo" />
                     </Link>
-                    <CopyRightInfo>Copyright &copy; 2022. Skolo. All Rights Reserved.</CopyRightInfo>
+                    <CopyRightInfo  >Copyright &copy; 2022. Skolo. All Rights Reserved.</CopyRightInfo>
                 </FirstColumn>
-                <SecondColumn>
+                <SecondColumn display={[ 'none', 'flex', 'flex', 'flex']}>
                     <LinkList>
                         <Link href="/">Home</Link>
                         <Link href="/about">About</Link>
@@ -141,7 +135,7 @@ function Footer() {
                             <a id="email-link" href='mailto:brianmillarsd@gmail.com' style={{ fontSize: '15px' }}>brianmillarsd@gmail.com</a>
                         </Contact>                                     */}
                 </SecondColumn>
-                <ThirdColumn>
+                <ThirdColumn display={[ 'none', 'flex', 'flex', 'flex' ]}>
                     <h2 style={{ fontSize: '17px', margin: '0px' }}>Stay Updated</h2>
                     <FormContainer id="form-container" action="/api/form" method="post">
 
@@ -176,3 +170,11 @@ function Footer() {
 }
 
 export default Footer
+
+// sx={{
+//     opacity: 0,
+//     ':hover': {
+//         opacity: '1',
+//         transition: '0.8s',
+//     }
+// }}
