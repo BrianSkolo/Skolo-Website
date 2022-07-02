@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.css';
+
 import styled from 'styled-components';
 import Link from "next/link";
 import { Flex, Box, Image, Heading, Button } from 'rebass';
@@ -10,12 +10,13 @@ const GradientDiv = styled.div`
 const FooterContainerFlex = styled(Flex)` 
     color: white;  
     justify-content: center;  
-    flex-wrap: wrap;         
+    flex-wrap: wrap; 
+       
 `;
 
 const FirstColumn = styled(Box)`  
     display: flex;
-    margin-right: 14px; 
+    margin-right: 8.5px; 
     flex-direction: column;
     justify-content: center;
 `;
@@ -28,11 +29,12 @@ const LogoImage = styled(Image)`
    
 `;
 
-const CopyRightInfo = styled.div`
-    display: flex;
-    justify-content: flex-start;
+const CopyRightInfo = styled(Box)`
+    // display: flex;
+   
     font-size: 8.5px;
     // padding-top: 2.5px;
+    
 `;
 
 const SecondColumn = styled(Box)`
@@ -52,11 +54,11 @@ const LinkList = styled(Box)`
 `;
 
 const ThirdColumn = styled(Box)`
-    display: flex;
+
     justify-content: center;
     // margin-right: 50px;  
     flex-direction: column; 
-    // padding-top: 17.5px;
+    padding-left: 10px;
 `;
 
 const FormContainer = styled.div`
@@ -115,14 +117,14 @@ const FooterContainerFlex2 = styled(Flex)`
 function Footer() {
     return (
         <GradientDiv>
-            <FooterContainerFlex>
+            <FooterContainerFlex >
                 <FirstColumn>
                     <Link href="/">
                         <LogoImage id="SkoloLogo" src="CroppedSkoloLogo2.png" alt="Skolo" />
                     </Link>
-                    <CopyRightInfo  >Copyright &copy; 2022. Skolo. All Rights Reserved.</CopyRightInfo>
+                    <CopyRightInfo  textAlign={['center', 'left', 'left']}>Copyright &copy; 2022. Skolo. All Rights Reserved.</CopyRightInfo>
                 </FirstColumn>
-                <SecondColumn display={[ 'none', 'flex', 'flex', 'flex']}>
+                <SecondColumn display={[ 'none', 'flex', 'flex', 'flex']} >
                     <LinkList>
                         <Link href="/">Home</Link>
                         <Link href="/about">About</Link>
@@ -135,7 +137,7 @@ function Footer() {
                             <a id="email-link" href='mailto:brianmillarsd@gmail.com' style={{ fontSize: '15px' }}>brianmillarsd@gmail.com</a>
                         </Contact>                                     */}
                 </SecondColumn>
-                <ThirdColumn display={[ 'none', 'flex', 'flex', 'flex' ]}>
+                <ThirdColumn display={[ 'none', 'flex', 'flex', 'flex' ]} >
                     <h2 style={{ fontSize: '17px', margin: '0px' }}>Stay Updated</h2>
                     <FormContainer id="form-container" action="/api/form" method="post">
 

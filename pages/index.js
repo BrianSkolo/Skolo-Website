@@ -103,7 +103,7 @@ const ColoredLine = ({ color }) => (
 function Home() {
 
   return (
-    <MasterFlexContainer p={[2, 2, 3, 4]}>
+    <MasterFlexContainer p={['7px', 2, 3, '32px']}>
       <NewReleases  >Current Releases:</NewReleases>
       {/* <ColoredLine color="white"  />   */}
       <ReleaseMessage fontSize={[1, 2, 2, 3]}>

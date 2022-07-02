@@ -16,15 +16,14 @@ const InfoContainerBox = styled(Box)`
 
 const UpcomingShows = styled.h1`
     font-family: BebasNeue;
-    // padding-top: 30px;
     margin: 0px;
     font-size: 50px;
    
 `;
 
 const ShowInfo = styled.div`
-    // margin-bottom: 8px;
-    padding-top: 3px;
+
+  
 `;
 
 const ImageContainerBox = styled(Box)`
@@ -41,23 +40,11 @@ const EventImage = styled.img`
     box-shadow: 0px 0px 5px #fff;    
 `;
 
-const ColoredLine = ({ color }) => (
-    <hr
-        style={{
-            color: color,
-            backgroundColor: color,
-            height: 2,
-            width: '750px',
-            marginTop: 0,
-            marginBottom: 0,
-        }}
-    />
-);
-function Shows() {
 
+function Shows() {
     return (
-        <HeaderContainerFlex p={[1, 2, 3, 4]}>
-            <InfoContainerBox p={[2, 2, 3]} fontSize={[1, 2, 3, 4]}>
+        <HeaderContainerFlex pt={[2, 2, 3, '40px']} p={[2, 2, 3, 4]} >
+            <InfoContainerBox  fontSize={[1, 2, 3, 4]}>
                 <UpcomingShows id="upcoming-shows">
                     Upcoming Shows:
                 </UpcomingShows>
@@ -72,7 +59,7 @@ function Shows() {
                     July 3, 2022
                 </ShowInfo>
             </InfoContainerBox>
-            <ImageContainerBox p={[2, 2, 3]}>
+            <ImageContainerBox >
                 <Link id="link" href="https://www.facebook.com/events/705625483884426">
                     <EventImage
                         id="image"

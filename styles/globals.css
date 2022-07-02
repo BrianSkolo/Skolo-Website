@@ -18,6 +18,7 @@ a {
   box-sizing: border-box;
 }
 
+
 @font-face {
   font-family:"BebasNeue";
   src:url("../public/fonts/BebasNeue-Regular.woff2") format("woff2"),url("../public/fonts/BebasNeue-Regular.woff") format("woff");
@@ -32,15 +33,5 @@ a {
   font-style:normal;font-weight:400;
 }
 
-/* @media screen and (min-width: 200px) {
-  .Layout {
-    display: none;
-    background-color: blue;
-  }
-} */
 
-/* @media screen and (max-width: 768px) {
-  .desktop-layout {
-    display: none;
-    color: blue;
-  } */
+ 
