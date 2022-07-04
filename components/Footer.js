@@ -117,12 +117,12 @@ const FooterContainerFlex2 = styled(Flex)`
 function Footer() {
     return (
         <GradientDiv>
-            <FooterContainerFlex >
-                <FirstColumn>
+            <FooterContainerFlex  >
+                <FirstColumn >
                     <Link href="/">
-                        <LogoImage id="SkoloLogo" src="CroppedSkoloLogo2.png" alt="Skolo" />
+                        <LogoImage display={[ 'none', 'flex', 'flex', 'flex']} id="SkoloLogo" src="CroppedSkoloLogo2.png" alt="Skolo" />
                     </Link>
-                    <CopyRightInfo  textAlign={['center', 'left', 'left']}>Copyright &copy; 2022. Skolo. All Rights Reserved.</CopyRightInfo>
+                    <CopyRightInfo display={[ 'none', 'flex', 'flex', 'flex']} textAlign={['center', 'left', 'left']}>Copyright &copy; 2022. Skolo. All Rights Reserved.</CopyRightInfo>
                 </FirstColumn>
                 <SecondColumn display={[ 'none', 'flex', 'flex', 'flex']} >
                     <LinkList>
