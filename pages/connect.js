@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import Link from "next/link";
 import styled from 'styled-components';
@@ -93,6 +94,8 @@ const SocialMediaImage = styled.img`
 
 
 export default function Form() {
+  const [email, setEmail] = useState('');
+  const signupHandler = () => console.log(`I was clicked ${email} <--`);
   return (
     <HeaderContainerFlex id="header-container" p={[1, 2, 3, '24px']}>
       <TourAndTixBox>
@@ -142,13 +145,18 @@ export default function Form() {
         <FormContainer id="form-container" className={styles.form} action="/api/form" method="post">
           <label htmlFor="third">
             <Input
+              onChange={(event) => setEmail(event.target.value)}
               type="text"
               id="email"
+              value={email}
               placeholder='Enter your email' />
           </label>
           <SignUpButton
+        
+            onClick={signupHandler}
             id="signUp-button"
-            type="submit">
+            type="submit"
+            >
             Sign Up
           </SignUpButton>
         </FormContainer>

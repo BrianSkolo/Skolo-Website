@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 import styled from 'styled-components';
 import Link from "next/link";
 import { Flex, Box, Image, Heading, Button } from 'rebass';
@@ -115,6 +115,7 @@ const FooterContainerFlex2 = styled(Flex)`
 `;
 
 function Footer() {
+    const signupHandler = () => console.log(`I was clicked ${email}`)
     return (
         <GradientDiv>
             <FooterContainerFlex  >
@@ -149,6 +150,7 @@ function Footer() {
                             />
                         </label>
                         <SignUpButton
+                            onClick={signupHandler}
                             id="signUp-button"
                             type="submit">
                             Sign Up

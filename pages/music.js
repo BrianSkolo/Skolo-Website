@@ -55,7 +55,7 @@ const ColoredLine = ({ color }) => (
 function BeatportLink() {
 
     return (
-        <HeaderContainerFlex id="header-container" width={[1, 1, 0.5, 1]} p={[2, 2, 3, 4]}>
+        <HeaderContainerFlex id="header-container" width={[1, 1, 1, 1]} p={[2, 2, 3, 4]}>
             {/* <ColoredLine color="white" />     */}
             <LinksContainerBox id='links-container'>
                 <Listen id="listen" style={{}}>Listen:</Listen>
