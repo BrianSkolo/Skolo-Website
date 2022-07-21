@@ -116,6 +116,7 @@ const FooterContainerFlex2 = styled(Flex)`
 
 function Footer() {
     const signupHandler = () => console.log(`I was clicked ${email}`)
+    const [email, setEmail] = useState('');
     return (
         <GradientDiv>
             <FooterContainerFlex  >
@@ -144,9 +145,11 @@ function Footer() {
 
                         <label htmlFor="third">
                             <Input
+                                onChange={(event) => setEmail(event.target.value)}
                                 type="text"
                                 id="email"
                                 placeholder='Enter your email'
+                                value={email}
                             />
                         </label>
                         <SignUpButton

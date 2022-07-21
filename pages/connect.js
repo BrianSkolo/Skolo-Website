@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css';
 import Link from "next/link";
 import styled from 'styled-components';
 import { Flex, Box, Heading, Button } from 'rebass';
+import axios from 'axios';
 
 
 
@@ -95,7 +96,11 @@ const SocialMediaImage = styled.img`
 
 export default function Form() {
   const [email, setEmail] = useState('');
-  const signupHandler = () => console.log(`I was clicked ${email} <--`);
+  const signupHandler = async () => {
+    console.log(`I was clicked ${email} <--`);
+    const res = await axios.post('/api/signup', {email})
+    console.log(res, res.status);
+  };
   return (
     <HeaderContainerFlex id="header-container" p={[1, 2, 3, '24px']}>
       <TourAndTixBox>

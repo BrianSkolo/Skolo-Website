@@ -10,6 +10,14 @@ const HeaderContainerFlex = styled(Flex)`
     color: white;
     margin: 0;
  `;
+ const Box1 = styled(Box)`
+    flex-direction: column;
+
+`;
+
+const Box2 = styled(Box)`
+    flex-direction: column;
+`;
 
 const InfoContainerBox = styled(Box)`
 `;
@@ -44,6 +52,7 @@ const EventImage = styled.img`
 function Shows() {
     return (
         <HeaderContainerFlex pt={[2, 2, 3, '40px']} p={[2, 2, 3, 4]} >
+          
             <InfoContainerBox  fontSize={[1, 2, 3, 4]}>
                 <UpcomingShows id="upcoming-shows">
                     Upcoming Shows:
@@ -68,7 +77,11 @@ function Shows() {
                     />
                 </Link>
             </ImageContainerBox>
+         
+
         </HeaderContainerFlex>
+
+        
     )
 }
 
