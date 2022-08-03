@@ -98,9 +98,18 @@ export default function Form() {
   const [email, setEmail] = useState('');
   const signupHandler = async () => {
     console.log(`I was clicked ${email} <--`);
+
+    // if (!email) {
+    //   alert('Please enter your name.')
+    //   return false
+    // }
+    
     const res = await axios.post('/api/signup', {email})
     console.log(res, res.status);
+    
   };
+
+ 
   return (
     <HeaderContainerFlex id="header-container" p={[1, 2, 3, '24px']}>
       <TourAndTixBox>
@@ -157,7 +166,7 @@ export default function Form() {
               placeholder='Enter your email' />
           </label>
           <SignUpButton
-        
+          
             onClick={signupHandler}
             id="signUp-button"
             type="submit"

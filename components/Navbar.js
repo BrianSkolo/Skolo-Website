@@ -22,7 +22,7 @@ function Navbar() {
     <NavContainer>
       <Link href="/"><NavLink>Home</NavLink></Link>
       <Link href="/about"><NavLink>About</NavLink></Link>
-      <Link href="/shows"><NavLink>Shows</NavLink></Link>
+      <Link href="/shows"><NavLink>Events</NavLink></Link>
       <Link href="/music"><NavLink>Listen</NavLink></Link>
       <Link href="/connect"><NavLink>Community</NavLink></Link>
     </NavContainer>

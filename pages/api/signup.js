@@ -21,5 +21,5 @@ export default async function handler(req, res) {
     .updateOne({ email }, { $set: emailDoc }, { upsert: true });
   console.log(resultMeta);
 // return 200 if everything is cool.
-  return res.status(400).send();
+  return res.status(200).send();
 }

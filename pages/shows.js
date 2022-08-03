@@ -64,7 +64,7 @@ function Shows() {
                 <ShowInfo id="address">
                     6250 Hollywood Blvd, Los Angeles CA
                 </ShowInfo>
-                <ShowInfo id="date">
+                <ShowInfo id="date" b>
                     July 3, 2022
                 </ShowInfo>
             </InfoContainerBox>
