@@ -106,7 +106,7 @@ export default function Form() {
     
     const res = await axios.post('/api/signup', {email})
     console.log(res, res.status);
-    
+    setEmail("")
   };
 
  

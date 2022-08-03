@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import Link from "next/link";
 import { Flex, Box, Image, Heading, Button } from 'rebass';
+import axios from 'axios';
 
 const GradientDiv = styled.div`
     background-image: linear-gradient(transparent, black);    
@@ -115,8 +116,16 @@ const FooterContainerFlex2 = styled(Flex)`
 `;
 
 function Footer() {
-    const signupHandler = () => console.log(`I was clicked ${email}`)
     const [email, setEmail] = useState('');
+    const signupHandler = async () => {
+        console.log(`I was clicked ${email}`) 
+        
+    const res = await axios.post('/api/signup', {email})
+    console.log(res, res.status);
+    setEmail("")
+    };  
+    
+ 
 
     // const onFormSubmit = (event) => {
     //     event.preventDefault()
@@ -156,6 +165,7 @@ function Footer() {
                                 id="email"
                                 placeholder='Enter your email'
                                 value={email}
+                                
                             />
                         </label>
                         <SignUpButton
